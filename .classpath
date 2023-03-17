@@ -5,9 +5,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="2Trimestre"/>
 	<classpathentry kind="src" path="3Trimestre"/>
+	<classpathentry kind="src" path="2Trimestre"/>
 	<classpathentry kind="src" path="1Trimestre"/>
 	<classpathentry kind="src" path="ENTORNOS_DESARROLLO"/>
 	<classpathentry kind="output" path="bin"/>
