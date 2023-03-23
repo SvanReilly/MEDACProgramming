@@ -2,6 +2,14 @@ package repaso1y2Trimestre;
 
 import java.util.Scanner;
 
+/**
+ * @author Alejandro Ortega Maldonado
+ * @author Aaron Rodriguez Gonzalez
+ * @version 1.0
+ * @param tablero para inicializar el tablero e
+ * @see repaso1y2Trimestre.TABLERO;
+ * @see repaso1y2Trimestre.JUGADOR;
+ */
 public class GAME {
 
 	private TABLERO tablero;
@@ -10,6 +18,12 @@ public class GAME {
 	private boolean finDePartida;
 	private JUGADOR ganador;
 
+	/**
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.1
+	 * @param jugador1 se inicializa en el constructor vacío con un nombre (Jugador 1) y marca por defecto (X).
+	 * @param jugador2 se inicializa en el constructor vacío con un nombre (Jugador 2) y marca por defecto (O).
+	 */
 	public GAME() {
 		this.tablero = new TABLERO();
 		this.jugador1 = new JUGADOR("Jugador 1", 'X');
@@ -57,18 +71,30 @@ public class GAME {
 	public void setGanador(JUGADOR ganador) {
 		this.ganador = ganador;
 	}
-
+	/**
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.0
+	 * @param DeployedBoard es un String inicializado vacío
+	 * @return Devolverá la coordenada insertada de la fila o la columna
+	 * @see repaso1y2Trimestre.TresEnRaya;
+	 */
 	public int pedirCoordenada(String tipo) {
 		System.out.println("Introduce la " + tipo + " (0-2): ");
-		Scanner scanner = new Scanner(System.in);
-		int coordenada = scanner.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int coordenada = sc.nextInt();
 		while (coordenada < 0 || coordenada > 2) {
 			System.out.println("Coordenada no válida. Introduce la " + tipo + " (0-2): ");
-			coordenada = scanner.nextInt();
+			coordenada = sc.nextInt();
 		}
 		return coordenada;
 	}
 
+	/**
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.0
+	 * @param jugadorActual 
+	 * @return Devolverá al jugador1 o jugador2 dependiendo de cual tenga asignado previamente.
+	 */
 	public JUGADOR cambiarJugador(JUGADOR jugadorActual) {
 		if (jugadorActual == this.jugador1) {
 			return this.jugador2;
@@ -76,7 +102,12 @@ public class GAME {
 			return this.jugador1;
 		}
 	}
-
+	/**
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.0
+	 * @param jugador
+	 * @return Devolverá un booleano si la partida ha terminado por victoria de algun jugador
+	 */
 	public boolean comprobarVictoria(JUGADOR jugador) {
 		// Comprobar filas
 		for (int i = 0; i < 3; i++) {
@@ -97,7 +128,11 @@ public class GAME {
 		}
 		return finDePartida;
 	}
-
+	/**
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.0
+	 * @return Devuelve un booleano en funcion de si todas las celdas están ocupadas, pero no hay un ganador, en dicho caso habría empate.
+	 */
 	public boolean comprobarEmpate() {
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
@@ -107,11 +142,17 @@ public class GAME {
 				}
 			}
 		}
-		// Todas las celdas están ocupadas, pero no hay un ganador, por lo que hay
-		// empate.
+		
 		return true;
 	}
-
+	/**
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.3
+	 * @param fila para la coordenada de la i en el for del tablero
+	 * @param columna para la coordenada de la j en el for del tablero.
+	 * @param jugadorActual para almacenar la información del jugador que le toca jugar en cada turno.
+	 * 
+	 */
 	public void empezarPartida() {
 		int fila, columna;
 		JUGADOR jugadorActual = this.jugador1;

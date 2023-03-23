@@ -1,13 +1,12 @@
 package repaso1y2Trimestre;
 
-import java.util.Arrays;
-
 /**
  * @author Alejandro Ortega Maldonado
  * @author Aaron Rodriguez Gonzalez
  * @version 1.0
  * @param CELDA[][] es un array bidimensional de la clase CELDA 
  * para representar una matriz para el tablero de juego
+ * @see repaso1y2Trimestre.CELDA;
  */
 public class TABLERO {
 	
@@ -34,7 +33,7 @@ public class TABLERO {
 	 * @author Alejandro Ortega Maldonado
 	 * @version 1.0
 	 * @param DeployedBoard es un String inicializado vacío
-	 * @return 
+	 * @return Imprimirá el tablero vacío del 3 en raya.
 	 */
 	public String toString() {
 		String DeployedBoard = "";
