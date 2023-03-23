@@ -6,6 +6,8 @@ import java.util.Arrays;
  * @author Alejandro Ortega Maldonado
  * @author Aaron Rodriguez Gonzalez
  * @version 1.0
+ * @param CELDA[][] es un array bidimensional de la clase CELDA 
+ * para representar una matriz para el tablero de juego
  */
 public class TABLERO {
 	
@@ -31,7 +33,8 @@ public class TABLERO {
 	/**
 	 * @author Alejandro Ortega Maldonado
 	 * @version 1.0
-	 * @param
+	 * @param DeployedBoard es un String inicializado vacío
+	 * @return 
 	 */
 	public String toString() {
 		String DeployedBoard = "";
