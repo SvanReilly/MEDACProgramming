@@ -1,14 +1,14 @@
 package repaso1y2Trimestre;
 
-public class player {
+public class JUGADOR {
 
 	private char markup;
 
-	public player() {
-		this.markup = 'X';
+	public JUGADOR() {
+		this.markup = 'N';
 	}
 
-	public player(char markup) {
+	public JUGADOR(char markup) {
 		this.markup = markup;
 	}
 
@@ -16,7 +16,7 @@ public class player {
 		return markup;
 	}
 
-	public boolean setMarkup(player player) {
+	public boolean setMarkup(JUGADOR player) {
 		boolean correcto;
 		if (player.getMarkup() == 'X') {
 			markup = '0';

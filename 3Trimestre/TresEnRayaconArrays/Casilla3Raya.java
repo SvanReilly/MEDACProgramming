@@ -1,4 +1,4 @@
-package tableGames;
+package TresEnRayaconArrays;
 
 public class Casilla3Raya {
 

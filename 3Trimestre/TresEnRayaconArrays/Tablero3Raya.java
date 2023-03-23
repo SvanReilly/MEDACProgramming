@@ -1,4 +1,4 @@
-package tableGames;
+package TresEnRayaconArrays;
 
 import java.util.HashMap;
 
