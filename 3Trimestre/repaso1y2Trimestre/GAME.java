@@ -128,7 +128,7 @@ public class GAME {
 			this.tablero.setCelda(fila, columna, jugadorActual.getMarkup());
 			if (comprobarVictoria(jugadorActual)) {
 				System.out.println(this.tablero);
-				System.out.println("¡Ha ganado el jugador " + jugadorActual.getMarkup() + "!");
+				System.out.println("¡Ha ganado el jugador " + jugadorActual.getName() +  jugadorActual.getMarkup() + "!");
 				this.finDePartida = true;
 				this.ganador = jugadorActual;
 			} else if (comprobarEmpate()) {
