@@ -1,13 +1,25 @@
 package repaso1y2Trimestre;
 
+/**
+ * @author Alejandro Ortega Maldonado
+ * @author Aaron Rodriguez Gonzalez
+ * @version 1.0
+ * 
+
+ * @param juego 
+ * @param jugadorActual
+ * @param fila
+ * @param columna
+ * 
+ * @see repaso1y2Trimestre.CELDA
+ * @see repaso1y2Trimestre.GAME
+ * @see repaso1y2Trimestre.JUGADOR
+ * @see repaso1y2Trimestre.TABLERO
+ *
+ */
 public class TresEnRaya {
 	public static void main(String[] args) {
 
-		TABLERO tablero = new TABLERO();
-		JUGADOR jugador1 = new JUGADOR();
-		JUGADOR jugador2 = new JUGADOR();
-		boolean finDePartida = false;
-		JUGADOR ganador = new JUGADOR();
 
 		GAME juego = new GAME();
 
@@ -30,14 +42,14 @@ public class TresEnRaya {
 					jugadorActual = juego.cambiarJugador(jugadorActual);
 				}
 			} else {
-				System.out.println("Esta celda ya está ocupada. Introduce otra coordenada.");
+				System.out.println("Esta celda ya estï¿½ ocupada. Introduce otra coordenada.");
 			}
 		}
 
 		if (juego.getGanador() != null) {
-			System.out.println("¡Felicidades, " + juego.getGanador().getMarkup() + "! ¡Has ganado!");
+			System.out.println("ï¿½Felicidades, " + juego.getGanador().getMarkup() + "! ï¿½Has ganado!");
 		} else {
-			System.out.println("¡Empate!");
+			System.out.println("ï¿½Empate!");
 		}
 	}
 }

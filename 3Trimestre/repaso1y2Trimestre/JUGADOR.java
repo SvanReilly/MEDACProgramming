@@ -1,5 +1,14 @@
 package repaso1y2Trimestre;
 
+/**
+ * @author Alejandro Ortega Maldonado
+ * @author Aaron Rodriguez Gonzalez
+ * @version 1.0
+ * 
+ * @param name nombre asociado al jugador
+ * @param markup simbolo que asocia la casilla al jugador
+ * 
+ */
 public class JUGADOR {
 
 	private String name;
