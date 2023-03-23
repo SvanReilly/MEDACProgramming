@@ -14,15 +14,35 @@ package repaso1y2Trimestre;
  
 public class CELDA {
     private char simbolo;
+    private int fila;
+    private int columna;
     private boolean ocupada;
     
     
     public CELDA() {
         this.simbolo = ' ';
+        this.fila=0;
+        this.columna=0;
         this.ocupada = false;
     }
     
-    public char getSimbolo() {
+    public int getFila() {
+		return fila;
+	}
+
+	public void setFila(int fila) {
+		this.fila = fila;
+	}
+
+	public int getColumna() {
+		return columna;
+	}
+
+	public void setColumna(int columna) {
+		this.columna = columna;
+	}
+
+	public char getSimbolo() {
         return simbolo;
     }
     

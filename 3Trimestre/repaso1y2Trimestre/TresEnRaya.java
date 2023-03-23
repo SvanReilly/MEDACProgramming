@@ -20,6 +20,7 @@ package repaso1y2Trimestre;
 public class TresEnRaya {
 	public static void main(String[] args) {
 
+		
 
 		GAME juego = new GAME();
 
@@ -48,9 +49,9 @@ public class TresEnRaya {
 		}
 
 		if (juego.getGanador() != null) {
-			System.out.println("Felicidades, " + juego.getGanador().getName() + " con la marca" + juego.getGanador().getMarkup() + " has ganado");
+			System.out.println("Felicidades, " + juego.getGanador().getName() + " con la marca (" + juego.getGanador().getMarkup() + ") has ganado.");
 		} else {
 			System.out.println("Empate de" + juego.getJugador1().getName());
 		}
-	}
-}
+	} 
+} 

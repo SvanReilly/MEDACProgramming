@@ -109,24 +109,38 @@ public class GAME {
 	 * @return Devolverá un booleano si la partida ha terminado por victoria de algun jugador
 	 */
 	public boolean comprobarVictoria(JUGADOR jugador) {
-		// Comprobar filas
-		for (int i = 0; i < 3; i++) {
-			if (this.tablero.getCelda(i, 0).getSimbolo() == jugador.getMarkup()
-					&& this.tablero.getCelda(i, 1).getSimbolo() == jugador.getMarkup()
-					&& this.tablero.getCelda(i, 2).getSimbolo() == jugador.getMarkup()) {
-				return true;
-			}
-		}
-		// Comprobar columnas
-		for (int j = 0; j < 3; j++) {
-			if (this.tablero.getCelda(0, j).getSimbolo() == jugador.getMarkup()
-					&& this.tablero.getCelda(1, j).getSimbolo() == jugador.getMarkup()
-					&& this.tablero.getCelda(2, j).getSimbolo() == jugador.getMarkup()) {
-				return true;
-			}
-
-		}
-		return finDePartida;
+	    // Comprobar filas
+	    for (int fila = 0; fila < 3; fila++) {
+	        if (tablero.getCelda(fila, 0).getSimbolo() == jugador.getMarkup() &&
+	            tablero.getCelda(fila, 1).getSimbolo() == jugador.getMarkup() &&
+	            tablero.getCelda(fila, 2).getSimbolo() == jugador.getMarkup()) {
+	            return true;
+	        }
+	    }
+	    
+	    // Comprobar columnas
+	    for (int columna = 0; columna < 3; columna++) {
+	        if (tablero.getCelda(0, columna).getSimbolo() == jugador.getMarkup() &&
+	            tablero.getCelda(1, columna).getSimbolo() == jugador.getMarkup() &&
+	            tablero.getCelda(2, columna).getSimbolo() == jugador.getMarkup()) {
+	            return true;
+	        }
+	    }
+	    
+	    // Comprobar diagonales
+	    if (tablero.getCelda(0, 0).getSimbolo() == jugador.getMarkup() &&
+	        tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup() &&
+	        tablero.getCelda(2, 2).getSimbolo() == jugador.getMarkup()) {
+	        return true;
+	    }
+	    
+	    if (tablero.getCelda(2, 0).getSimbolo() == jugador.getMarkup() &&
+	        tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup() &&
+	        tablero.getCelda(0, 2).getSimbolo() == jugador.getMarkup()) {
+	        return true;
+	    }
+	    
+	    return finDePartida;
 	}
 	/**
 	 * @author Alejandro Ortega Maldonado
