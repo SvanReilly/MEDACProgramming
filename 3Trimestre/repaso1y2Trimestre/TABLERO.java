@@ -2,6 +2,11 @@ package repaso1y2Trimestre;
 
 import java.util.Arrays;
 
+/**
+ * @author Alejandro Ortega Maldonado
+ * @author Aaron Rodriguez Gonzalez
+ * @version 1.0
+ */
 public class TABLERO {
 	
 	private CELDA[][] tableroDeJuego;
@@ -23,7 +28,11 @@ public class TABLERO {
 		this.tableroDeJuego[fila][columna].setSimbolo(simbolo);
 		this.tableroDeJuego[fila][columna].setOcupada(true);
 	}
-
+	/**
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.0
+	 * @param
+	 */
 	public String toString() {
 		String DeployedBoard = "";
 		for (int i = 0; i < 3; i++) {
