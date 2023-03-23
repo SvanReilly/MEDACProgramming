@@ -1,13 +1,13 @@
-package repaso1y2Trimestre;
+package TresEnRayaconArrays;
 
-public class Celda {
+public class Celda1 {
 
 	private int valor;
 	private int fila;
 	private int columna;
 	private boolean ocupada;
 
-	public Celda(int valor, int fila, int columna, boolean ocupada) {
+	public Celda1(int valor, int fila, int columna, boolean ocupada) {
 		super();
 		this.valor = valor;
 		this.fila = fila;

@@ -1,10 +1,10 @@
-package TresEnRayaconArrays;
+package repaso1y2Trimestre;
 
-public class Celda {
+public class CELDA {
     private char simbolo;
     private boolean ocupada;
     
-    public Celda() {
+    public CELDA() {
         this.simbolo = ' ';
         this.ocupada = false;
     }

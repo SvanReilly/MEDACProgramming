@@ -4,25 +4,25 @@ import java.util.Scanner;
 
 public class GAME {
 
-	private Tablero tablero;
+	private TABLERO tablero;
 	private JUGADOR jugador1;
 	private JUGADOR jugador2;
 	private boolean finDePartida;
 	private JUGADOR ganador;
 
 	public GAME() {
-		this.tablero = new Tablero();
-		this.jugador1 = new JUGADOR('X');
-		this.jugador2 = new JUGADOR('O');
+		this.tablero = new TABLERO();
+		this.jugador1 = new JUGADOR("Jugador 1", 'X');
+		this.jugador2 = new JUGADOR("Jugador 2", 'O');
 		this.finDePartida = false;
 		this.ganador = null;
 	}
 
-	public Tablero getTablero() {
+	public TABLERO getTablero() {
 		return tablero;
 	}
 
-	public void setTablero(Tablero tablero) {
+	public void setTablero(TABLERO tablero) {
 		this.tablero = tablero;
 	}
 

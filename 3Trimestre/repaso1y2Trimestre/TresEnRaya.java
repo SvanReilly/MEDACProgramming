@@ -1,26 +1,31 @@
 package repaso1y2Trimestre;
 
-import java.util.Scanner;
-
 public class TresEnRaya {
 	public static void main(String[] args) {
-		GAME juego = new GAME();
-	
-		System.out.println(juego.tablero);
 
-		player jugadorActual = juego.jugador1;
-		while (!juego.finDePartida) {
+		TABLERO tablero = new TABLERO();
+		JUGADOR jugador1 = new JUGADOR();
+		JUGADOR jugador2 = new JUGADOR();
+		boolean finDePartida = false;
+		JUGADOR ganador = new JUGADOR();
+
+		GAME juego = new GAME();
+
+		System.out.println(juego.getTablero());
+
+		JUGADOR jugadorActual = juego.getJugador1();
+		while (!juego.isFinDePartida()) {
 			int fila = juego.pedirCoordenada("fila");
 			int columna = juego.pedirCoordenada("columna");
 
-			if (!juego.tablero.getCelda(fila, columna).isOcupada()) {
-				juego.tablero.setCelda(fila, columna, jugadorActual.getMarkup());
-				System.out.println(juego.tablero);
+			if (!juego.getTablero().getCelda(fila, columna).isOcupada()) {
+				juego.getTablero().setCelda(fila, columna, jugadorActual.getMarkup());
+				System.out.println(juego.getTablero());
 
 				// Comprobar si el jugador actual ha ganado
 				if (juego.comprobarVictoria(jugadorActual)) {
-					juego.finDePartida = true;
-					juego.ganador = jugadorActual;
+					juego.setFinDePartida(true);
+					juego.setGanador(jugadorActual);
 				} else {
 					jugadorActual = juego.cambiarJugador(jugadorActual);
 				}
@@ -29,8 +34,8 @@ public class TresEnRaya {
 			}
 		}
 
-		if (juego.ganador != null) {
-			System.out.println("¡Felicidades, " + juego.ganador.getMarkup() + "! ¡Has ganado!");
+		if (juego.getGanador() != null) {
+			System.out.println("¡Felicidades, " + juego.getGanador().getMarkup() + "! ¡Has ganado!");
 		} else {
 			System.out.println("¡Empate!");
 		}

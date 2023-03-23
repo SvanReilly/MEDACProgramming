@@ -6,22 +6,20 @@ package repaso1y2Trimestre;
 
 import java.util.Arrays;
 
-import TresEnRayaconArrays.Celda;
-
-public class Tablero {
+public class TABLERO {
 	
-	private Celda[][] tableroDeJuego;
+	private CELDA[][] tableroDeJuego;
 
-	public Tablero() {
-		this.tableroDeJuego = new Celda[3][3];
+	public TABLERO() {
+		this.tableroDeJuego = new CELDA[3][3];
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				this.tableroDeJuego[i][j] = new Celda();
+				this.tableroDeJuego[i][j] = new CELDA();
 			}
 		}
 	}
 
-	public Celda getCelda(int fila, int columna) {
+	public CELDA getCelda(int fila, int columna) {
 		return tableroDeJuego[fila][columna];
 	}
 
