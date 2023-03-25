@@ -1,16 +1,15 @@
 package repaso1y2Trimestre;
 
-public class AI extends player {
+public class AI extends JUGADOR {
 
-	private tablero3EnRaya heuristica;
+	private TABLERO heuristica;
 
 	public AI() {
 		super();
-		setMarkup();
 		// TODO Auto-generated constructor stub
 	}
 
-	public AI(tablero3EnRaya heuristica) {
+	public AI(TABLERO heuristica) {
 		super();
 		this.heuristica = heuristica;
 	}
@@ -22,15 +21,9 @@ public class AI extends player {
 	}
 
 	@Override
-	public boolean setMarkup(player player) {
+	public boolean setMarkup(JUGADOR player) {
 		// TODO Auto-generated method stub
 		return super.setMarkup(player);
-	}
-
-	@Override
-	public void putMarkupOnBoard() {
-		// TODO Auto-generated method stub
-		super.putMarkupOnBoard();
 	}
 
 	
