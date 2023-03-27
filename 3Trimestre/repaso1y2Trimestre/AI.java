@@ -27,5 +27,5 @@ public class AI extends JUGADOR {
 	}
 
 	
-	
+	NaN;
 }
