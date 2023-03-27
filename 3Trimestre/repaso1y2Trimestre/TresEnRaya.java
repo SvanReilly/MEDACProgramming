@@ -5,8 +5,8 @@ package repaso1y2Trimestre;
  * @author Aaron Rodriguez Gonzalez
  * @version 1.0
  * 
-
- * @param juego 
+ * 
+ * @param juego
  * @param jugadorActual
  * @param fila
  * @param columna
@@ -20,17 +20,19 @@ package repaso1y2Trimestre;
 public class TresEnRaya {
 	public static void main(String[] args) {
 
-		
-
 		GAME juego = new GAME();
 
 		System.out.println(juego.getTablero());
 
-		
 		JUGADOR jugadorActual = juego.getJugador1();
 		while (!juego.isFinDePartida()) {
+
 			int fila = juego.pedirCoordenada("fila");
 			int columna = juego.pedirCoordenada("columna");
+
+			/*
+			 * 
+			 */
 
 			if (!juego.getTablero().getCelda(fila, columna).isOcupada()) {
 				juego.getTablero().setCelda(fila, columna, jugadorActual.getMarkup());
@@ -49,9 +51,26 @@ public class TresEnRaya {
 		}
 
 		if (juego.getGanador() != null) {
-			System.out.println("Felicidades, " + juego.getGanador().getName() + " con la marca (" + juego.getGanador().getMarkup() + ") has ganado.");
+			System.out.println("Felicidades, " + juego.getGanador().getName() + " con la marca ("
+					+ juego.getGanador().getMarkup() + ") has ganado.");
 		} else {
 			System.out.println("Empate de" + juego.getJugador1().getName());
 		}
-	} 
-} 
+	}
+}
+
+/*
+ * int fila, columna;
+ * System.out.println("Inserte un caracter de posicion (de 'a' hasta 'i'): ");
+ * char celdaValor = sc.next().charAt(0);
+ * 
+ * switch (celdaValor) { case 'a': fila = 0; columna = 0; break; case 'b': fila
+ * = 0; columna = 1; break; case 'c': fila = 0; columna = 2; break; case 'd':
+ * fila = 1; columna = 0; break; case 'e': fila = 1; columna = 1; break; case
+ * 'f': fila = 1; columna = 2; break;
+ * 
+ * case 'g': fila = 2; columna = 0; break; case 'h': fila = 2; columna = 1;
+ * break; case 'i': fila = 2; columna = 2; break;
+ * 
+ * default: fila = 0; columna = 0; break; }
+ */

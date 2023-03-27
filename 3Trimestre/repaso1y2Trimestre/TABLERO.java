@@ -4,12 +4,12 @@ package repaso1y2Trimestre;
  * @author Alejandro Ortega Maldonado
  * @author Aaron Rodriguez Gonzalez
  * @version 1.0
- * @param CELDA[][] es un array bidimensional de la clase CELDA 
- * para representar una matriz para el tablero de juego
+ * @param CELDA[][] es un array bidimensional de la clase CELDA para representar
+ *                  una matriz para el tablero de juego
  * @see repaso1y2Trimestre.CELDA;
  */
 public class TABLERO {
-	
+
 	private CELDA[][] tableroDeJuego;
 
 	public TABLERO() {
@@ -29,6 +29,7 @@ public class TABLERO {
 		this.tableroDeJuego[fila][columna].setSimbolo(simbolo);
 		this.tableroDeJuego[fila][columna].setOcupada(true);
 	}
+
 	/**
 	 * @author Alejandro Ortega Maldonado
 	 * @version 1.0
