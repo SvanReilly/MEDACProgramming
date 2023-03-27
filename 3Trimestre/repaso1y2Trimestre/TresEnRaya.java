@@ -25,15 +25,18 @@ public class TresEnRaya {
 		System.out.println(juego.getTablero());
 
 		JUGADOR jugadorActual = juego.getJugador1();
+		
+		
+		
 		while (!juego.isFinDePartida()) {
 
-			int fila = juego.pedirCoordenada("fila");
-			int columna = juego.pedirCoordenada("columna");
+			probar pedir coordenadas nuevo
+			int fila = juego.pedirCoordenada1("fila");
+			int columna = juego.pedirCoordenada1("columna");
 
 			/*
 			 * 
 			 */
-
 			if (!juego.getTablero().getCelda(fila, columna).isOcupada()) {
 				juego.getTablero().setCelda(fila, columna, jugadorActual.getMarkup());
 				System.out.println(juego.getTablero());
@@ -53,7 +56,7 @@ public class TresEnRaya {
 		if (juego.getGanador() != null) {
 			System.out.println("Felicidades, " + juego.getGanador().getName() + " con la marca ("
 					+ juego.getGanador().getMarkup() + ") has ganado.");
-		} else {
+		} else if (juego.comprobarEmpate()) {
 			System.out.println("Empate de" + juego.getJugador1().getName());
 		}
 	}
