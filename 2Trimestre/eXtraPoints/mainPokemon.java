@@ -10,7 +10,7 @@ public class mainPokemon {
 		Pokedex1 pokedex=new Pokedex1();
 
 		Pokemon Bulbasaur = new Pokemon(1, "Bulbasaur", "Plant", "Poison",
-				"There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.");
+				"There is a plant seed on its back right from the day this Pokï¿½mon is born. The seed slowly grows larger.");
 		Pokemon Ivysaur = new Pokemon(2, "Ivysaur", "Plant", "Poison",
 				"When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.");
 		Pokemon Venusaur = new Pokemon(3, "Venusaur", "Plant", "Poison",
@@ -22,13 +22,13 @@ public class mainPokemon {
 		Pokemon Charizard = new Pokemon(9, "Charizard", "Fire", "Flying",
 				"It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.");
 
-		arra.añadirPokemon(Bulbasaur);
-		arra.añadirPokemon(Ivysaur);
-		arra.añadirPokemon(Venusaur);
-		arra.añadirPokemon(Charmander);
-		arra.añadirPokemon(Charmeleon);
-		arra.añadirPokemon(Charizard);
-		pokedex.añadirPokemonPokedex("Bulbasaur");
+		arra.anadirPokemon(Bulbasaur);
+		arra.anadirPokemon(Ivysaur);
+		arra.anadirPokemon(Venusaur);
+		arra.anadirPokemon(Charmander);
+		arra.anadirPokemon(Charmeleon);
+		arra.anadirPokemon(Charizard);
+		pokedex.anadirPokemonPokedex("Bulbasaur");
 		
 		
 

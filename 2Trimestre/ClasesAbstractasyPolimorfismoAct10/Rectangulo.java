@@ -1,11 +1,11 @@
 package ClasesAbstractasyPolimorfismoAct10;
 
-public class Rectángulo extends FiguraGeométrica {
+public class Rectangulo extends FiguraGeometrica {
 
 	private double base;
 	private double altura;
 
-	public Rectángulo(double base, double altura) {
+	public Rectangulo(double base, double altura) {
 		super();
 		if (base > 0) {
 			this.base = base;
@@ -20,7 +20,7 @@ public class Rectángulo extends FiguraGeométrica {
 
 	}
 
-	public Rectángulo() {
+	public Rectangulo() {
 		super();
 		this.base = 1;
 		this.altura = 2;
@@ -53,7 +53,7 @@ public class Rectángulo extends FiguraGeométrica {
 	}
 
 	@Override
-	public String compararArea(FiguraGeométrica figura1, FiguraGeométrica figura2) {
+	public String compararArea(FiguraGeometrica figura1, FiguraGeometrica figura2) {
 
 		return super.compararArea(figura1, figura2);
 	}
@@ -73,7 +73,7 @@ public class Rectángulo extends FiguraGeométrica {
 	@Override
 	public String toString() {
 
-		return super.toString() + "La figura se trata de un Rectángulo y sus medidas son:" + "\nBase: " + this.base
+		return super.toString() + "La figura se trata de un Rectï¿½ngulo y sus medidas son:" + "\nBase: " + this.base
 				+ "\nAltura: " + this.altura + " \nArea: " + this.calcArea() + " \nPerimetro: " + this.calcPerimetro()
 				+ "\n****************************************************************";
 	}

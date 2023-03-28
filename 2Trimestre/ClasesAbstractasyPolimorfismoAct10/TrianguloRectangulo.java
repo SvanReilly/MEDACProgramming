@@ -1,12 +1,12 @@
 package ClasesAbstractasyPolimorfismoAct10;
 
-public class TriánguloRectángulo extends FiguraGeométrica {
+public class TrianguloRectangulo extends FiguraGeometrica {
 
 	private double catetoA;
 	private double catetoB;
 	private double hipotenusa;
 
-	protected TriánguloRectángulo(double catetoA, double catetoB, double hipotenusa) {
+	protected TrianguloRectangulo(double catetoA, double catetoB, double hipotenusa) {
 		super();
 		if (catetoA > 0) {
 			this.catetoA = catetoA;
@@ -66,7 +66,7 @@ public class TriánguloRectángulo extends FiguraGeométrica {
 	}
 
 	@Override
-	public String compararArea(FiguraGeométrica figura1, FiguraGeométrica figura2) {
+	public String compararArea(FiguraGeometrica figura1, FiguraGeometrica figura2) {
 		return super.compararArea(figura1, figura2);
 	}
 
@@ -85,7 +85,7 @@ public class TriánguloRectángulo extends FiguraGeométrica {
 	@Override
 	public String toString() {
 
-		return super.toString() + "La figura se trata de un Triángulo rectángulo y sus medidas son:" + "\nCateto A: "
+		return super.toString() + "La figura se trata de un Triï¿½ngulo rectï¿½ngulo y sus medidas son:" + "\nCateto A: "
 				+ this.catetoA + "\nCateto B: " + this.catetoB + " \nHipotenusa: " + this.hipotenusa + " \nArea: "
 				+ this.calcArea() + " \nPerimetro: " + this.calcPerimetro()
 				+ "\n****************************************************************";

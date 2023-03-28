@@ -16,13 +16,13 @@ public class TestLista {
 		CantanteFamoso JoeyBada$$ = new CantanteFamoso("Joey Bada$$", 790000, "Hip-Hop");
 
 		ListaCantantesFamosos registroCantantes = new ListaCantantesFamosos();
-		registroCantantes.añadirCantante(MichaelJackson);
-		registroCantantes.añadirCantante(Joji);
-		registroCantantes.añadirCantante(Sade);
-		registroCantantes.añadirCantante(BobMarley);
-		registroCantantes.añadirCantante(FreddieMercury);
-		registroCantantes.añadirCantante(KendrickLamar);
-		registroCantantes.añadirCantante(JoeyBada$$);
+		registroCantantes.anadirCantante(MichaelJackson);
+		registroCantantes.anadirCantante(Joji);
+		registroCantantes.anadirCantante(Sade);
+		registroCantantes.anadirCantante(BobMarley);
+		registroCantantes.anadirCantante(FreddieMercury);
+		registroCantantes.anadirCantante(KendrickLamar);
+		registroCantantes.anadirCantante(JoeyBada$$);
 
 		System.out.println("Todos los cantantes registrados: \n");
 		registroCantantes.mostrarCantantes();

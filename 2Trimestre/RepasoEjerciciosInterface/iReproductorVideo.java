@@ -42,8 +42,8 @@ public interface iReproductorVideo extends iReproductorPortatil{
     public boolean isReproduceJPG();
     public void setReproduceJPG(boolean reproduceJPG);
     
-    public float getTamañoDeLaPantalla();
-    public void setTamañoDeLaPantalla(float tamañoDeLaPantalla);
+    public float getTamanoDeLaPantalla();
+    public void setTamanoDeLaPantalla(float tamanoDeLaPantalla);
     
     public boolean isTelevision();
     public void setTelevision(boolean television);

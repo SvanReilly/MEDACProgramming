@@ -92,13 +92,13 @@ public class Perro extends Animal {
 	}
 
 	@Override
-	public String reproducción() {
+	public String reproduccion() {
 		// TODO Auto-generated method stub
 		String sexualidad = "";
 		if (this.genero == 'M') {
 			sexualidad = ";D 8====D";
 		} else if (this.genero == 'F') {
-			sexualidad = ";D ((ô)) ";
+			sexualidad = ";D ((ï¿½)) ";
 		} else {
 			sexualidad = "GGGGGGRRRRRR! >:3 (No juzgues mi sexualidad)";
 
@@ -108,7 +108,7 @@ public class Perro extends Animal {
 
 	public String bocaoEnElPecho() {
 
-		return " (GRGRGRR)·$U%$&$%·$%·!!!)";
+		return " (GRGRGRR)ï¿½$U%$&$%ï¿½$%ï¿½!!!)";
 
 	}
 

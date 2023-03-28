@@ -1,9 +1,9 @@
 package RepasoEjerciciosInterface;
 
 /*P2.  a)  Defina  una  clase  ReproductorMultimedia.  Un  reproductor  multimedia  es  un  reproductor 
-portátil que puede reproducir tanto archivos de sonido como archivos de video. Decida si la clase 
-ReproductorMultimedia deberá extender alguna clase de las definidas anteriormente, así como 
-si  dicha  clase  deberá  implementar  alguna  de  las  interfaces  anteriormente  definidas  y,  si  es 
+portï¿½til que puede reproducir tanto archivos de sonido como archivos de video. Decida si la clase 
+ReproductorMultimedia deberï¿½ extender alguna clase de las definidas anteriormente, asï¿½ como 
+si  dicha  clase  deberï¿½  implementar  alguna  de  las  interfaces  anteriormente  definidas  y,  si  es 
 necesario, defina una interfaz adecuada para la misma. 
  
 Recuerde  dotar  a  la  clase  de  un  constructor  con  argumentos  que  pueda  recibir  tanto  los 
@@ -26,7 +26,7 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 	private boolean reproduceCDS, reproduceMP3, reproduceWMA, reproduceVorbis, accesoCarpetas, radio, grabadoraVoz;
 	// Atributos requeridos de la interfaz iReproductorVideo//
 	private boolean reproduceWMV, reproduceDIVX, reproduceMPG, reproduceDVD, reproduceJPG, television;
-	private float tamañoDeLaPantalla;
+	private float tamanoDeLaPantalla;
 
 	// Constructor por defecto//
 	public ReproductorMultimedia() {
@@ -50,9 +50,9 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 		this.setReproduceDVD(false);
 		this.setReproduceJPG(true);
 		this.setTelevision(true);
-		this.setTamañoDeLaPantalla(5.5f);
+		this.setTamanoDeLaPantalla(5.5f);
 	}
-	// Constructores por parámetros//
+	// Constructores por parï¿½metros//
 
 	public ReproductorMultimedia(String marca, String modelo, String archivoVideo, String formatoDeVideo,
 			String archivoAudio, String formatoDeAudio) {
@@ -76,7 +76,7 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 		this.setReproduceDVD(false);
 		this.setReproduceJPG(true);
 		this.setTelevision(true);
-		this.setTamañoDeLaPantalla(5.5f);
+		this.setTamanoDeLaPantalla(5.5f);
 
 	}
 
@@ -84,7 +84,7 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 			boolean reproduceCDS, boolean reproduceMP3, boolean reproduceWMA, boolean reproduceVorbis,
 			boolean accesoCarpetas, boolean radio, boolean grabadoraVoz, boolean reproduceWMV, boolean reproduceDIVX,
 			boolean reproduceMPG, boolean reproduceDVD, boolean reproduceJPG, boolean television,
-			float tamañoDeLaPantalla) {
+			float tamanoDeLaPantalla) {
 		super();
 		this.archivoVideo = archivoVideo;
 		this.formatoDeVideo = formatoDeVideo;
@@ -103,7 +103,7 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 		this.reproduceDVD = reproduceDVD;
 		this.reproduceJPG = reproduceJPG;
 		this.television = television;
-		this.tamañoDeLaPantalla = tamañoDeLaPantalla;
+		this.tamanoDeLaPantalla = tamanoDeLaPantalla;
 	}
 
 	/*
@@ -247,12 +247,12 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 		this.television = television;
 	}
 
-	public float getTamañoDeLaPantalla() {
-		return tamañoDeLaPantalla;
+	public float getTamanoDeLaPantalla() {
+		return tamanoDeLaPantalla;
 	}
 
-	public void setTamañoDeLaPantalla(float tamañoDeLaPantalla) {
-		this.tamañoDeLaPantalla = tamañoDeLaPantalla;
+	public void setTamanoDeLaPantalla(float tamanoDeLaPantalla) {
+		this.tamanoDeLaPantalla = tamanoDeLaPantalla;
 	}
 
 	/* SPECIFIC METHODS */
@@ -282,7 +282,7 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 	" tiene seleccionado: " + 
 	"\n"+ 
 	"\n" +
-	this.archivoVideo + "." + this.formatoDeVideo + " como archivo de vídeo." + 
+	this.archivoVideo + "." + this.formatoDeVideo + " como archivo de vï¿½deo." + 
 	"\n"+
 	this.archivoAudio + "." + this.formatoDeAudio + " como archivo de audio." +
 	"\n_________________________________________________________________________"+
@@ -296,7 +296,7 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 	"\n"+
 	"Vorbis: " + this.reproduceVorbis + 
 	"\n_________________________________________________________________________"+
-	"\nFormatos de vídeo compatibles ('true'): " +
+	"\nFormatos de vï¿½deo compatibles ('true'): " +
 	"\n" +
 	"WMV: " + this.reproduceWMV + 
 	"\n" +
@@ -306,16 +306,17 @@ public class ReproductorMultimedia extends ReproductorPortatil implements iRepro
 	"\nFormatos de imagen compatibles ('true'): " +
 	"JPG: " + this.reproduceJPG + 
 	"\n_________________________________________________________________________"+
-	"\nOtras características ('true'): " +
+	"\nOtras caracterï¿½sticas ('true'): " +
 	"\n" +
-	"Gestión y acceso a carpetas: " + this.accesoCarpetas + 
+	"Gestiï¿½n y acceso a carpetas: " + this.accesoCarpetas + 
 	"\n" +
 	"Grabadora de voz: " + this.grabadoraVoz +
 	"\n" + 
 	"Sintonizar emisoras de radio: " + this.radio +
-	"Sintonizar canales de televisión: " + this.television +
+	"Sintonizar canales de televisiï¿½n: " + this.television +
 	"\n" +
-	"Dimensiones de la pantalla (pulgadas/inches)" + this.tamañoDeLaPantalla + ".";
+	"Dimensiones de la pantalla (pulgadas/inches)" + this.tamanoDeLaPantalla + ".";
 	}
+
 }
 

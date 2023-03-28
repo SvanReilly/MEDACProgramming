@@ -90,7 +90,7 @@ public class Pato extends Animal {
 	}
 
 	@Override
-	public String reproducción() {
+	public String reproduccion() {
 		// TODO Auto-generated method stub
 		String sexualidad = "";
 		if (this.genero == 'M') {

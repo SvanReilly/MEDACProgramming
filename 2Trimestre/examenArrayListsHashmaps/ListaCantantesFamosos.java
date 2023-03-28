@@ -10,7 +10,7 @@ public class ListaCantantesFamosos {
 		this.listaCantantesFamosos = new ArrayList<>();
 	}
 
-	public void añadirCantante(CantanteFamoso singer) {
+	public void anadirCantante(CantanteFamoso singer) {
 		this.listaCantantesFamosos.add(singer);
 	}
 
@@ -22,7 +22,7 @@ public class ListaCantantesFamosos {
 		String singerList = "";
 		for (CantanteFamoso singer : this.listaCantantesFamosos) {
 			if (genre.equalsIgnoreCase(singer.getGeneroMusical())) {
-				singerList += singer.getNombre() + ", con sus aportaciones a la música " + singer.getGeneroMusical()
+				singerList += singer.getNombre() + ", con sus aportaciones a la mï¿½sica " + singer.getGeneroMusical()
 						+ ", ha conseguido un total de " + singer.getVentas() + " ventas registradas." + "\n";
 			}
 		}

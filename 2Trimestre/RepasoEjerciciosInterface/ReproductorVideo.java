@@ -4,13 +4,13 @@ public class ReproductorVideo extends ReproductorPortatil implements iReproducto
 	
 
 	private boolean reproduceWMV, reproduceDIVX, reproduceMPG, reproduceDVD, reproduceJPG, television;
-	private	float tamañoDeLaPantalla;
+	private	float tamanoDeLaPantalla;
 
-	public ReproductorVideo(String marca, String modelo, float tamañoDeLaPantalla) {
+	public ReproductorVideo(String marca, String modelo, float tamanoDeLaPantalla) {
 		super();
 		this.setMarca(marca);
 		this.setModelo(modelo);
-		this.tamañoDeLaPantalla = tamañoDeLaPantalla;
+		this.tamanoDeLaPantalla = tamanoDeLaPantalla;
 	}
 
 	public boolean isReproduceWMV() {
@@ -61,12 +61,12 @@ public class ReproductorVideo extends ReproductorPortatil implements iReproducto
 		this.television = television;
 	}
 
-	public float getTamañoDeLaPantalla() {
-		return tamañoDeLaPantalla;
+	public float getTamanoDeLaPantalla() {
+		return tamanoDeLaPantalla;
 	}
 
-	public void setTamañoDeLaPantalla(float tamañoDeLaPantalla) {
-		this.tamañoDeLaPantalla = tamañoDeLaPantalla;
+	public void setTamanoDeLaPantalla(float tamanoDeLaPantalla) {
+		this.tamanoDeLaPantalla = tamanoDeLaPantalla;
 	}
 
 

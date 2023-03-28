@@ -2,7 +2,7 @@ package ejercicios;
 
 import java.util.Scanner;
 
-public class uwuEjercicioAceleracióncon2parámetros {
+public class uwuEjercicioAceleracioncon2parametros {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		

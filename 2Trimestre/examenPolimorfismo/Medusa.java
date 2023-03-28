@@ -9,8 +9,8 @@ public class Medusa extends Animal {
 	private char genero;
 
 	public Medusa(String reino, String familia, String especie) {
-		this.nombre = "Cubículo";
-		this.color = "Celeste Translúcido";
+		this.nombre = "Cubï¿½culo";
+		this.color = "Celeste Translï¿½cido";
 		this.raza = "Cubozoa";
 		this.edad = 1;
 		this.genero = 'F';
@@ -92,7 +92,7 @@ public class Medusa extends Animal {
 	}
 
 	@Override
-	public String reproducción() {
+	public String reproduccion() {
 		// TODO Auto-generated method stub
 		String sexualidad = "";
 		if (this.genero == 'M') {
@@ -106,9 +106,9 @@ public class Medusa extends Animal {
 		return sexualidad;
 	}
 	
-	public String tentáculo() {
+	public String tentaculo() {
 		
-	 return " *Wlopp*, *Blopp*...(Óbito)";
+	 return " *Wlopp*, *Blopp*...(Ã“bito)";
 	 
 	}
 	

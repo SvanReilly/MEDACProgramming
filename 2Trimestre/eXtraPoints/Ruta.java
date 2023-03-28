@@ -26,14 +26,14 @@ public class Ruta {
 	}
 
 	//
-	public void añadirPokemon(Pokemon pokemon) {
-		this.pokemonRuta.añadirPokemon(pokemon);
+	public void anadirPokemon(Pokemon pokemon) {
+		this.pokemonRuta.anadirPokemon(pokemon);
 	}
 
-	public void añadirPokemon(String nombrePokemon) {
+	public void anadirPokemon(String nombrePokemon) {
 		for (int i = 0; i < pokemonRuta.getPokes().size(); i++) {
 			if (nombrePokemon.equals(pokemonRuta.getPokes().get(i).getNombre())) {
-				this.pokemonRuta.añadirPokemon(pokemon);
+				this.pokemonRuta.anadirPokemon(pokemon);
 			} else {
 
 			}

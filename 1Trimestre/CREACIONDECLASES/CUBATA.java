@@ -10,7 +10,7 @@ public class CUBATA {
 	private boolean tienelimon;
 	private boolean tienenaranja;
 
-	// Constructor vacío//
+	// Constructor vacio//
 	public CUBATA() {
 		this.numhielos = 0;
 		this.cantidadactual = 0;
@@ -20,7 +20,7 @@ public class CUBATA {
 		this.tienenaranja = false;
 	}
 
-	// Constructor con parámetros//
+	// Constructor con parametros//
 	public CUBATA(String Alcohol, String Mezcla, int cantidadactual, int numhielos, boolean tienelimon,
 			boolean tienenaranja) {
 		if (numhielos > 0) {
@@ -118,7 +118,7 @@ public class CUBATA {
 
 	}
 
-	public void añadirhielo(int cantidadhielo) {
+	public void anadirhielo(int cantidadhielo) {
 		if ((this.cantidadactual <= 450) && (this.numhielos <= 3)) {
 			this.numhielos = this.numhielos + cantidadhielo;
 			this.cantidadactual += 25;
@@ -147,12 +147,12 @@ public class CUBATA {
 		this.tienelimon = false;
 	}
 
-	public void añadirlimon() {
+	public void anadirlimon() {
 		this.tienelimon = true;
 		System.out.println("");
 	}
 
-	public void añadirnaranja() {
+	public void anadirnaranja() {
 		this.tienenaranja = true;
 		System.out.println("");
 	}
@@ -170,8 +170,8 @@ public class CUBATA {
 		String limon, naranja, contenidoAlc = null, contenidoMez = null;
 
 		if ((this.Alcohol == "") || (this.Mezcla == "")) {
-			contenidoAlc = " Vacío.";
-			contenidoMez = " Vacío.";
+			contenidoAlc = " Vacï¿½o.";
+			contenidoMez = " Vacï¿½o.";
 		} else if (this.Alcohol == this.Alcohol) {
 			contenidoAlc = this.Alcohol;
 		} else if (this.Mezcla == this.Mezcla) {
@@ -185,16 +185,16 @@ public class CUBATA {
 		}
 
 		if (this.tienelimon == true) {
-			limon = " Ahora cuenta con una exaltante y agria rodaja de limón.";
+			limon = " Ahora cuenta con una exaltante y agria rodaja de limï¿½n.";
 		} else {
-			limon = " Sin limón.";
+			limon = " Sin limï¿½n.";
 		}
 
 		return "****************************************************************"
 				+ "\nSostienes el vaso, lo giras sutilmente y observas su contenido."
 				+ "\n****************************************************************" + "\nAlcohol: " + contenidoAlc
 				+ "\nMezcla/Refresco:" + contenidoMez + " \nCantidad actual del vaso: " + this.cantidadactual + "/"
-				+ this.capacidadmaxima + " \n¿Naranja?:" + naranja + " \n¿Limón?:" + limon + " \nCantidad de hielos: "
+				+ this.capacidadmaxima + " \nï¿½Naranja?:" + naranja + " \nï¿½Limï¿½n?:" + limon + " \nCantidad de hielos: "
 				+ this.numhielos + "\n****************************************************************";
 
 	}

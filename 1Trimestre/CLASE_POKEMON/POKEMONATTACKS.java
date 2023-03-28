@@ -4,7 +4,7 @@ public class POKEMONATTACKS {
 
 	private int potencia;
 	private String tipoAtaque;
-	private String tipoDaño;
+	private String tipoDano;
 	private int PP;
 	private int precision;
 	private boolean prioridad;
@@ -17,14 +17,14 @@ public class POKEMONATTACKS {
 	private double multbuff=1.5;
 	private double multdebuff=0.5;
 	
-	//CONSTRUCTOR VACÍO//
-		public POKEMONATTACKS(int potencia, String tipoAtaque, String tipoDaño, int PP, int precision, boolean prioridad,
+	//CONSTRUCTOR VACï¿½O//
+		public POKEMONATTACKS(int potencia, String tipoAtaque, String tipoDano, int PP, int precision, boolean prioridad,
 				double chanceVeneno, double chanceParalisis, double chanceQuemar, double chanceCongelado,
 				double chanceConfundir, double chanceDormir, double multbuff, double multdebuff) {
 			
 			this.potencia = potencia;
 			this.tipoAtaque = tipoAtaque;
-			this.tipoDaño = tipoDaño;
+			this.tipoDano = tipoDano;
 			this.PP = PP;
 			this.precision = precision;
 			this.prioridad = prioridad;
@@ -44,7 +44,7 @@ public class POKEMONATTACKS {
 	
 
 
-	//CONSTRUCTOR CON PARÁMETROS//
+	//CONSTRUCTOR CON PARï¿½METROS//
 	
 	
 	//GETTERS&SETTERS//

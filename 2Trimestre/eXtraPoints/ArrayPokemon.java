@@ -24,7 +24,7 @@ public class ArrayPokemon {
 	}
 
 	// SPECIFIC METHODS//
-	public void añadirPokemon(Pokemon pokemon) {
+	public void anadirPokemon(Pokemon pokemon) {
 		this.pokes.add(pokemon);
 	}
 

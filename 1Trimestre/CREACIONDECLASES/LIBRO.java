@@ -2,27 +2,27 @@ package CREACIONDECLASES;
 
 public class LIBRO {
 
-	private int añopublicacion, numpag;
+	private int anopublicacion, numpag;
 	private long ISBN;
 	private String titulo, autor;
 	private boolean prestado;
 
-	// CONSTRUCTOR VACÍO//
+	// CONSTRUCTOR VACï¿½O//
 	public LIBRO() {
 		this.ISBN = 0;
 		this.titulo = "";
 		this.autor = "";
-		this.añopublicacion = 0;
+		this.anopublicacion = 0;
 		this.numpag = 0;
 		this.prestado = false;
 	}
 
-	// CONSTRUCTOR CON PARÁMETROS//
-	public LIBRO(long ISBN, String titulo, String autor, int añopublicacion, int numpag, boolean prestado) {
+	// CONSTRUCTOR CON PARï¿½METROS//
+	public LIBRO(long ISBN, String titulo, String autor, int anopublicacion, int numpag, boolean prestado) {
 		this.ISBN = 0;
 		this.titulo = "";
 		this.autor = "";
-		this.añopublicacion = 868;
+		this.anopublicacion = 868;
 		this.numpag = 49;
 		this.prestado = false;
 	}
@@ -43,12 +43,12 @@ public class LIBRO {
 		
 	}
 
-	public int getAñopublicacion() {
-		return this.añopublicacion;
+	public int getAnopublicacion() {
+		return this.anopublicacion;
 	}
 
-	public void setAñopublicacion(int añopublicacion) {
-		this.añopublicacion = añopublicacion;
+	public void setAnopublicacion(int anopublicacion) {
+		this.anopublicacion = anopublicacion;
 		
 	}
 
@@ -110,7 +110,7 @@ public class LIBRO {
 		} return correcto;
 		
 	}
-	// Checar páginas.
+	// Checar paginas.
 	public boolean CheckPages(LIBRO librocomp) {
 		return this.numpag>librocomp.getNumpag();
 		
@@ -121,7 +121,7 @@ public class LIBRO {
 	public String toString() {
 			
 		return "El libro: " + this.titulo + " con ISBN: " + this.ISBN + "y creado por " + this.autor +
-				 "en " + this.añopublicacion + " tiene " + this.numpag + " páginas y está " + this.prestado;
+				 "en " + this.anopublicacion + " tiene " + this.numpag + " pï¿½ginas y estï¿½ " + this.prestado;
 				
 	}
 

@@ -4,7 +4,7 @@ public class LIBRO2 {
 	private long ISBN;
 	private String titulo;
 	private String autor;
-	private int añopub;
+	private int anopub;
 	private int numpags;
 	private boolean prestado;
 	
@@ -13,17 +13,17 @@ public class LIBRO2 {
 		this.ISBN = 0;
 		this.titulo = "";
 		this.autor = "";
-		this.añopub = 0;
+		this.anopub = 0;
 		this.numpags = 0;
 		this.prestado = false;
 	}
 	
-	public LIBRO2(long ISBN, String titulo, String autor, int añopub, int numpags) {
+	public LIBRO2(long ISBN, String titulo, String autor, int anopub, int numpags) {
 		if(numpags>0 && ISBN>0) {
 			this.ISBN = ISBN;
 			this.titulo = titulo;
 			this.autor = autor;
-			this.añopub = añopub;
+			this.anopub = anopub;
 			this.numpags = numpags;
 			this.prestado = false;
 		}
@@ -57,12 +57,12 @@ public class LIBRO2 {
 		this.autor = autor;
 	}
 
-	public int getAñopub() {
-		return añopub;
+	public int getAnopub() {
+		return anopub;
 	}
 
-	public void setAñopub(int añopub) {
-		this.añopub = añopub;
+	public void setAnopub(int anopub) {
+		this.anopub = anopub;
 	}
 
 	public int getNumpags() {

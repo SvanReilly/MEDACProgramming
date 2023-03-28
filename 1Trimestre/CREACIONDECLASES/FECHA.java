@@ -3,32 +3,32 @@ package CREACIONDECLASES;
 public class FECHA {
 
 	/*
-	 * CREE UNA CLASE FECHA. LA CLASE CONTENDRÁ CONSTRUCTORES, MÉTODOS PARA
-	 * MANIPULAR LAS PROPIEDADES Y EL MÉTODO toString(). ADEMÁS DEBER TENER UN
-	 * MÉTODO PARA COMPROBAR SI LA FECHA ES CORRECTA Y OTROS PARA AÑADIR Y RESTAR UN
-	 * DÍA A LA FECHA, ACTUALIZÁNDOLA CONVENIENTEMENTE.
+	 * CREE UNA CLASE FECHA. LA CLASE CONTENDRï¿½ CONSTRUCTORES, Mï¿½TODOS PARA
+	 * MANIPULAR LAS PROPIEDADES Y EL Mï¿½TODO toString(). ADEMï¿½S DEBER TENER UN
+	 * Mï¿½TODO PARA COMPROBAR SI LA FECHA ES CORRECTA Y OTROS PARA Aï¿½ADIR Y RESTAR UN
+	 * Dï¿½A A LA FECHA, ACTUALIZï¿½NDOLA CONVENIENTEMENTE.
 	 */
 
 	private int dia;
 	private int mes;
-	private int año;
+	private int ano;
 
 	public FECHA() {
 		this.dia = 1;
 		this.mes = 1;
-		this.año = 0;
+		this.ano = 0;
 	}
 
-	public FECHA(int dia, int mes, int año) {
-		if (this.comprobarFecha(dia, mes, año)) {
+	public FECHA(int dia, int mes, int ano) {
+		if (this.comprobarFecha(dia, mes, ano)) {
 			this.dia = dia;
 			this.mes = mes;
-			this.año = año;
+			this.ano = ano;
 
 		} else {
 			this.dia = 1;
 			this.mes = 1;
-			this.año = 0;
+			this.ano = 0;
 		}
 	}
 
@@ -38,7 +38,7 @@ public class FECHA {
 
 	public boolean setDia(int dia) {
 		boolean correcto = true;
-		if (this.comprobarFecha(dia, this.mes, this.año)) {
+		if (this.comprobarFecha(dia, this.mes, this.ano)) {
 			this.dia = dia;
 		} else {
 			correcto = false;
@@ -52,7 +52,7 @@ public class FECHA {
 
 	public boolean setMes(int mes) {
 		boolean correcto = true;
-		if (this.comprobarFecha(this.dia, mes, this.año)) {
+		if (this.comprobarFecha(this.dia, mes, this.ano)) {
 			this.mes = mes;
 		} else {
 			correcto = false;
@@ -60,22 +60,22 @@ public class FECHA {
 		return correcto;
 	}
 
-	public int getAño() {
-		return año;
+	public int getAno() {
+		return ano;
 	}
 
-	public void setAño(int año) {
-		this.año = año;
+	public void setAno(int ano) {
+		this.ano = ano;
 	}
 
 	public void incrementarDia() {
-		if (this.comprobarFecha(this.dia + 1, this.mes, this.año)) {
+		if (this.comprobarFecha(this.dia + 1, this.mes, this.ano)) {
 			this.dia++;
 		} else {
 			if (this.mes == 12) {
 				this.dia = 1;
 				this.mes = 1;
-				this.año++;
+				this.ano++;
 			} else {
 				this.dia = 1;
 				this.mes++;
@@ -84,19 +84,19 @@ public class FECHA {
 	}
 
 	public void decrementarDia() {
-		if (this.comprobarFecha(this.dia - 1, this.mes, this.año)) {
+		if (this.comprobarFecha(this.dia - 1, this.mes, this.ano)) {
 			this.dia--;
 		} else {
 			if (this.mes == 1) {
 				this.dia = 31;
 				this.mes = 12;
-				this.año--;
+				this.ano--;
 			} else {
 				if (this.mes - 1 == 2) {
-					if (this.comprobarFecha(this.dia - 1, this.mes, this.año)) {
+					if (this.comprobarFecha(this.dia - 1, this.mes, this.ano)) {
 						this.dia--;
 					} else {
-						if (this.comprobarFecha(29, mes--, this.año)) {
+						if (this.comprobarFecha(29, mes--, this.ano)) {
 							this.dia = 29;
 							this.mes--;
 						} else {
@@ -104,11 +104,11 @@ public class FECHA {
 							this.mes--;
 						}
 					}
-					if (this.comprobarFecha(this.dia - 1, this.mes, this.año)) {
+					if (this.comprobarFecha(this.dia - 1, this.mes, this.ano)) {
 						this.dia = 31;
 						this.mes--;
 					} else {
-						if (this.comprobarFecha(this.dia - 1, this.mes - 1, this.año)) {
+						if (this.comprobarFecha(this.dia - 1, this.mes - 1, this.ano)) {
 							this.dia = 30;
 							this.mes--;
 						}
@@ -118,13 +118,13 @@ public class FECHA {
 		}
 	}
 
-	public boolean comprobarFecha(int dia, int mes, int año) {
+	public boolean comprobarFecha(int dia, int mes, int ano) {
 		boolean correcto = true;
 		if (dia < 1 || mes < 1 || dia > 31 || mes > 12) {
 			correcto = false;
 		} else {
 			if (mes == 2) {
-				if ((dia == 29 && año%4!= 0 || dia >= 30))
+				if ((dia == 29 && ano%4!= 0 || dia >= 30))
 					correcto = false;
 			} else if (mes == 4 || mes == 6 || mes == 9 || mes == 11 && dia == 31) {
 				correcto = false;
@@ -136,7 +136,7 @@ public class FECHA {
 	}
 
 	public String toString() {
-		return "La fecha es " + dia + " / " + mes + " / " + año + ".";
+		return "La fecha es " + dia + " / " + mes + " / " + ano + ".";
 	}
 
 }

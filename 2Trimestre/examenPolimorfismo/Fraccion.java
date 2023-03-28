@@ -1,17 +1,17 @@
 package examenPolimorfismo;
 
-public class Fracción implements iOperable {
+public class Fraccion implements iOperable {
 
 	private int numerador;
 	private int denominador;
 	private int numeroEntero;
 
-	public Fracción() {
+	public Fraccion() {
 		this.numerador = 2;
 		this.denominador = 3;
 	}
 
-	public Fracción(int numerador, int denominador) {
+	public Fraccion(int numerador, int denominador) {
 		super();
 		this.numerador = numerador;
 		this.denominador = denominador;

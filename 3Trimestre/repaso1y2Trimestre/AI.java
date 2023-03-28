@@ -1,8 +1,11 @@
 package repaso1y2Trimestre;
 
 public class AI extends JUGADOR {
+	//PENDIENTE//
 
 	private TABLERO heuristica;
+	
+	
 
 	public AI() {
 		super();
@@ -26,6 +29,4 @@ public class AI extends JUGADOR {
 		return super.setMarkup(player);
 	}
 
-	
-	NaN;
 }

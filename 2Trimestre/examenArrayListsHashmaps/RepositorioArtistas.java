@@ -11,11 +11,11 @@ public class RepositorioArtistas {
 		this.repository = new HashMap<>();
 	}
 
-	public void añadirCantante(String singerName, ArrayList<String> songs) {
+	public void anadirCantante(String singerName, ArrayList<String> songs) {
 		this.repository.put(singerName, songs);
 	}
 
-	public void añadirCanciones(String singerName, ArrayList<String> songs) {
+	public void anadirCanciones(String singerName, ArrayList<String> songs) {
 		ArrayList<String> existingSongs = this.repository.get(singerName);
 		if (existingSongs == null) {
 			existingSongs = new ArrayList<>();

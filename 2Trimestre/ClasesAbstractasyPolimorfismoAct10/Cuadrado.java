@@ -1,6 +1,6 @@
 package ClasesAbstractasyPolimorfismoAct10;
 
-public class Cuadrado extends FiguraGeométrica {
+public class Cuadrado extends FiguraGeometrica {
 
 	private double lado;
 
@@ -28,7 +28,7 @@ public class Cuadrado extends FiguraGeométrica {
 	}
 
 	@Override
-	public String compararArea(FiguraGeométrica figura1, FiguraGeométrica figura2) {
+	public String compararArea(FiguraGeometrica figura1, FiguraGeometrica figura2) {
 
 		return super.compararArea(figura1, figura2);
 	}

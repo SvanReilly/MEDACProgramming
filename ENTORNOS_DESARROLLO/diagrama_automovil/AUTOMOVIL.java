@@ -2,20 +2,20 @@ package diagrama_automovil;
 
 public class AUTOMOVIL {
 
-	public PERSONA dueño;
+	public PERSONA dueno;
 	PUERTA derecha;
 	PUERTA izquierda;
 	MOTOR motor;
 
 	public AUTOMOVIL() {
-		dueño = new PERSONA();
+		dueno = new PERSONA();
 		derecha = new PUERTA();
 		izquierda = new PUERTA();
 		motor = new MOTOR();
 	}
 	
-	public AUTOMOVIL(PERSONA dueño, PUERTA derecha, PUERTA izquierda, MOTOR motor) {
-		this.dueño = dueño;
+	public AUTOMOVIL(PERSONA dueno, PUERTA derecha, PUERTA izquierda, MOTOR motor) {
+		this.dueno = dueno;
 		this.derecha = derecha;
 		this.izquierda = izquierda;
 		this.motor = motor;
@@ -48,12 +48,12 @@ public class AUTOMOVIL {
 
 	public String toString() {
 
-		return ("El dueño del automóvil es: " + dueño.getNombre() + 
-				"\nLa puerta derecha está " + derecha.isAbierta() +
-				" y la puerta izquierda está " + izquierda.isAbierta() + 
+		return ("El dueno del automovil es: " + dueno.getNombre() + 
+				"\nLa puerta derecha esta " + derecha.isAbierta() +
+				" y la puerta izquierda esta " + izquierda.isAbierta() + 
 				"\nmotor=" + motor.isEncendido() + 
-				"\nla ventanilla derecha está: " + derecha.ventana.isAbierta() + 
-				"\nla ventanilla izquierda está:" + izquierda.ventana.isAbierta());
+				"\nla ventanilla derecha estï¿½: " + derecha.ventana.isAbierta() + 
+				"\nla ventanilla izquierda estï¿½:" + izquierda.ventana.isAbierta());
 	}
 
 }

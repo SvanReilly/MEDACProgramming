@@ -30,7 +30,8 @@ public class TresEnRaya {
 		
 		while (!juego.isFinDePartida()) {
 
-			probar pedir coordenadas nuevo
+			//probar pedir coordenadas nuevo
+			
 			int fila = juego.pedirCoordenada1("fila");
 			int columna = juego.pedirCoordenada1("columna");
 

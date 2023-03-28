@@ -1,13 +1,13 @@
 package EjemplosClasesAbstractas;
 
 public class Unicornio extends Animal{
-	private int tamañoCuerno;
+	private int tamanoCuerno;
 	private int edad;
 	
 	
-	public Unicornio(int tamañoCuerno, int edad, String reino, String familia, String especie, String rama) {
+	public Unicornio(int tamanoCuerno, int edad, String reino, String familia, String especie, String rama) {
 		super (reino, familia, especie, rama);
-		this.tamañoCuerno = tamañoCuerno;
+		this.tamanoCuerno = tamanoCuerno;
 		this.edad = edad;
 		
 	}

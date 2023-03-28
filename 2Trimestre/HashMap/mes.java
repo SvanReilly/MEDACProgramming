@@ -23,7 +23,7 @@ public class mes {
 		this.mes = mes;
 	}
 
-	public boolean añadirDia(int dia, Tiempo t) {
+	public boolean anadirDia(int dia, Tiempo t) {
 		boolean resultado=false;
 		if (dia > 0 && dia <= this.numdias) {
 			this.mes.put(dia, t);

@@ -22,7 +22,7 @@ public abstract class Animal {
 	
 	public abstract String comer();
 	
-	public abstract String reproducción();
+	public abstract String reproduccion();
 	
 }
 

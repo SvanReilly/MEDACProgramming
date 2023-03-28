@@ -8,7 +8,7 @@ public class Pokedex1 {
 	private Pokemon pokemon;
 	ArrayPokemon APokemon = new ArrayPokemon();
 	Pokemon Bulbasaur = new Pokemon(1, "Bulbasaur", "Plant", "Poison",
-			"There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.");
+			"There is a plant seed on its back right from the day this Pokï¿½mon is born. The seed slowly grows larger.");
 	Pokemon Charmander = new Pokemon(4, "Charmander", "Fire",
 			"It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.");
 	Pokemon Squirtle = new Pokemon(7, "Squirtle", "Water",
@@ -37,11 +37,11 @@ public class Pokedex1 {
 	}
 
 	@SuppressWarnings("unused")
-	public boolean añadirPokemonPokedex(String nombrePokemon) {
+	public boolean anadirPokemonPokedex(String nombrePokemon) {
 		boolean respuesta = false;
 		for (int i = 0; i < APokemon.getPokes().size(); i++) {
 			if (nombrePokemon.equals(APokemon.getPokes().get(i).getNombre())) {
-				this.APokemon.añadirPokemon(pokemon);
+				this.APokemon.anadirPokemon(pokemon);
 				respuesta = true;
 			} else {
 
@@ -61,7 +61,7 @@ public class Pokedex1 {
 	
 			} else {
 
-				PokeInfo = "No hay información acerca del Pokemon mencionado.";
+				PokeInfo = "No hay informaciï¿½n acerca del Pokemon mencionado.";
 			}
 
 		}

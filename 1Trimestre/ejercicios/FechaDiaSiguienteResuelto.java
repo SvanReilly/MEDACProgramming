@@ -7,22 +7,22 @@ public class FechaDiaSiguienteResuelto {
 		Scanner sc = new Scanner(System.in);
 		
 		/* Escribe un programa que lea una fecha representada por 3 datos de tipo entero e imprima
-		 * en la pantalla la fecha correspondiente al día siguiente. 
+		 * en la pantalla la fecha correspondiente al dï¿½a siguiente. 
 		 */
 		
-		int dia,mes,año;
+		int dia,mes,ano;
 		System.out.println("Dime dia");
 		dia=sc.nextInt();
 		System.out.println("Dime mes");
 		mes=sc.nextInt();
-		System.out.println("Dime año");
-		año=sc.nextInt();
+		System.out.println("Dime aï¿½o");
+		ano=sc.nextInt();
 		
 		if (dia>31 || dia<1 || mes<1 || mes>12)
 			System.out.println("Ingrese una fecha valida, calambuco/a.");
 		
 		if(dia<=27 || dia==29) {
-			if(dia == 29 && mes == 2 && año % 4 ==0) {
+			if(dia == 29 && mes == 2 && ano % 4 ==0) {
 				dia=1;
 				mes++;
 			} else {
@@ -30,7 +30,7 @@ public class FechaDiaSiguienteResuelto {
 			}
 			
 		} else if(dia==28) {
-			if(mes==2 && año % 4!=0) {
+			if(mes==2 && ano % 4!=0) {
 				dia=1;
 				mes++;
 			} else {
@@ -47,7 +47,7 @@ public class FechaDiaSiguienteResuelto {
 			if(mes==12) {
 				dia=1;
 				mes=1;
-				año++;
+				ano++;
 			} else {
 				dia=1;
 				mes++;
@@ -56,7 +56,7 @@ public class FechaDiaSiguienteResuelto {
 		
 		
 		
-		System.out.println("La fecha siguiente serÃ­a: " + dia + "/" + mes + "/"+ año);
+		System.out.println("La fecha siguiente serÃ­a: " + dia + "/" + mes + "/"+ ano);
 		
 	}
 }
