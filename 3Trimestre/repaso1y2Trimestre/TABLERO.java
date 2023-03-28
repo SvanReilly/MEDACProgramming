@@ -33,8 +33,8 @@ public class TABLERO {
 	/**
 	 * @author Alejandro Ortega Maldonado
 	 * @version 1.0
-	 * @param DeployedBoard es un String inicializado vacío
-	 * @return Imprimirá el tablero vacío del 3 en raya.
+	 * @param DeployedBoard es un String inicializado vacio
+	 * @return Imprimira el tablero vacio del 3 en raya.
 	 */
 	public String toString() {
 		String DeployedBoard = "";

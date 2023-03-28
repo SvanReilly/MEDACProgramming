@@ -1,5 +1,7 @@
 package repaso1y2Trimestre;
 
+import java.util.Scanner;
+
 /**
  * @author Alejandro Ortega Maldonado
  * @author Aaron Rodriguez Gonzalez
@@ -19,7 +21,7 @@ package repaso1y2Trimestre;
  */
 public class TresEnRaya {
 	public static void main(String[] args) {
-
+		Scanner sc = new Scanner (System.in);
 		GAME juego = new GAME();
 
 		System.out.println(juego.getTablero());
@@ -31,14 +33,16 @@ public class TresEnRaya {
 		while (!juego.isFinDePartida()) {
 
 			//probar pedir coordenadas nuevo
-			
-			int fila = juego.pedirCoordenada1("fila");
-			int columna = juego.pedirCoordenada1("columna");
+			System.out.println("Inserte un caracter de posicion (de 'a' hasta 'i'): ");
+			juego.pedirCoordenada(sc.next().charAt(0), jugadorActual);;
+			// int fila = juego.pedirCoordenada1("fila");
+			// int columna = juego.pedirCoordenada1("columna");
 
 			/*
 			 * 
 			 */
 			if (!juego.getTablero().getCelda(fila, columna).isOcupada()) {
+				
 				juego.getTablero().setCelda(fila, columna, jugadorActual.getMarkup());
 				System.out.println(juego.getTablero());
 
