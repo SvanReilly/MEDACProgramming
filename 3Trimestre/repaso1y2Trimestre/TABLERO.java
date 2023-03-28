@@ -8,7 +8,7 @@ package repaso1y2Trimestre;
  *                  una matriz para el tablero de juego
  * @see repaso1y2Trimestre.CELDA;
  */
-public class TABLERO {
+public class TABLERO extends CELDA{
 
 	private CELDA[][] tableroDeJuego;
 
@@ -29,7 +29,6 @@ public class TABLERO {
 		this.tableroDeJuego[fila][columna].setSimbolo(simbolo);
 		this.tableroDeJuego[fila][columna].setOcupada(true);
 	}
-
 	/**
 	 * @author Alejandro Ortega Maldonado
 	 * @version 1.0

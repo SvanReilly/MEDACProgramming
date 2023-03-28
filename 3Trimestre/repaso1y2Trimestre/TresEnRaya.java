@@ -21,64 +21,63 @@ import java.util.Scanner;
  */
 public class TresEnRaya {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner (System.in);
+		Scanner sc = new Scanner(System.in);
 		GAME juego = new GAME();
 
 		System.out.println(juego.getTablero());
 
 		JUGADOR jugadorActual = juego.getJugador1();
-		
-		
-		
-		while (!juego.isFinDePartida()) {
+		char coordenada;
 
-			//probar pedir coordenadas nuevo
+		do {
+
 			System.out.println("Inserte un caracter de posicion (de 'a' hasta 'i'): ");
-			juego.pedirCoordenada(sc.next().charAt(0), jugadorActual);;
-			// int fila = juego.pedirCoordenada1("fila");
-			// int columna = juego.pedirCoordenada1("columna");
+			coordenada = sc.next().charAt(0);
+			juego.comprobarCeldas(coordenada);
 
-			/*
-			 * 
-			 */
-			if (!juego.getTablero().getCelda(fila, columna).isOcupada()) {
-				
-				juego.getTablero().setCelda(fila, columna, jugadorActual.getMarkup());
-				System.out.println(juego.getTablero());
+			do {
+				System.out.println("Esa celda esta ocupada elija otra, por favor: ");
+				coordenada = sc.next().charAt(0);
+				juego.comprobarCeldas(coordenada);
 
-				// Comprobar si el jugador actual ha ganado
-				if (juego.comprobarVictoria(jugadorActual)) {
-					juego.setFinDePartida(true);
-					juego.setGanador(jugadorActual);
-				} else {
-					jugadorActual = juego.cambiarJugador(jugadorActual);
-				}
+			} while (!juego.pedirCoordenada(coordenada, jugadorActual));
+
+			// Comprobar si el jugador actual ha ganado
+			if (juego.comprobarVictoria(jugadorActual) == true) {
+				juego.setFinDePartida(true);
+				juego.setGanador(jugadorActual);
 			} else {
-				System.out.println("Esta celda ya esta ocupada. Introduce otra coordenada.");
+				jugadorActual = juego.cambiarJugador(jugadorActual);
+				juego.comprobarVictoria(jugadorActual);
+				juego.setFinDePartida(true);
+				juego.setGanador(jugadorActual);
 			}
-		}
 
-		if (juego.getGanador() != null) {
-			System.out.println("Felicidades, " + juego.getGanador().getName() + " con la marca ("
-					+ juego.getGanador().getMarkup() + ") has ganado.");
-		} else if (juego.comprobarEmpate()) {
-			System.out.println("Empate de" + juego.getJugador1().getName());
-		}
+		} while (!juego.isFinDePartida());
+
 	}
 }
 
+// probar pedir coordenadas nuevo
+
+// int fila = juego.pedirCoordenada1("fila");
+// int columna = juego.pedirCoordenada1("columna");
+
 /*
- * int fila, columna;
- * System.out.println("Inserte un caracter de posicion (de 'a' hasta 'i'): ");
- * char celdaValor = sc.next().charAt(0);
  * 
- * switch (celdaValor) { case 'a': fila = 0; columna = 0; break; case 'b': fila
- * = 0; columna = 1; break; case 'c': fila = 0; columna = 2; break; case 'd':
- * fila = 1; columna = 0; break; case 'e': fila = 1; columna = 1; break; case
- * 'f': fila = 1; columna = 2; break;
+ */
+
+/*
+ * System.out.println(juego.getTablero());
  * 
- * case 'g': fila = 2; columna = 0; break; case 'h': fila = 2; columna = 1;
- * break; case 'i': fila = 2; columna = 2; break;
  * 
- * default: fila = 0; columna = 0; break; }
+ * }
+ * 
+ * 
+ * if (juego.getGanador() != null) { System.out.println("Felicidades, " +
+ * juego.getGanador().getName() + " con la marca (" +
+ * juego.getGanador().getMarkup() + ") has ganado."); } else if
+ * (juego.getGanador()==null) { System.out.println("Empate de" +
+ * juego.getJugador1().getName() + " y " + juego.getJugador2().getName()); } } }
+ * 
  */

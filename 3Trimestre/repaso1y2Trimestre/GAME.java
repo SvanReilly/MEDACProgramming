@@ -81,59 +81,212 @@ public class GAME {
 	 * @return Devolvera la coordenada insertada de la fila o la columna
 	 * @see repaso1y2Trimestre.TresEnRaya;
 	 */
-	public int pedirCoordenada1(String tipo) {
-		System.out.println("Introduce la " + tipo + " (0-2): ");
-		Scanner sc = new Scanner(System.in);
-		int coordenada = sc.nextInt();
-		while (coordenada < 0 || coordenada > 2) {
-			System.out.println("Coordenada no valida. Introduce la " + tipo + " (0-2): ");
-			coordenada = sc.nextInt();
-		}
-		return coordenada;
-	}
-
-	public void pedirCoordenada(char coordenada, JUGADOR jugadorActual) {
-
+	public boolean comprobarCeldas(char coordenada) {
+		boolean correcto = false;
 		switch (coordenada) {
 		case 'a':
-			getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+			if (getTablero().getCelda(0, 0).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'A':
+			if (getTablero().getCelda(0, 0).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'b':
-			getTablero().setCelda(0, 1, jugadorActual.getMarkup());
-
+			if (getTablero().getCelda(0, 1).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'B':
+			if (getTablero().getCelda(0, 1).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'c':
-			getTablero().setCelda(0, 2, jugadorActual.getMarkup());
-
+			if (getTablero().getCelda(0, 2).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'C':
+			if (getTablero().getCelda(0, 2).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'd':
-			getTablero().setCelda(1, 0, jugadorActual.getMarkup());
-
+			if (getTablero().getCelda(1, 0).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'D':
+			if (getTablero().getCelda(1, 0).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'e':
-			getTablero().setCelda(1, 1, jugadorActual.getMarkup());
-
+			if (getTablero().getCelda(1, 1).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'E':
+			if (getTablero().getCelda(1, 1).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'f':
-			getTablero().setCelda(1, 2, jugadorActual.getMarkup());
-
+			if (getTablero().getCelda(1, 2).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'F':
+			if (getTablero().getCelda(1, 2).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'g':
-			getTablero().setCelda(2, 0, jugadorActual.getMarkup());
+			if (getTablero().getCelda(2, 0).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'G':
+			if (getTablero().getCelda(2, 0).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'h':
-			getTablero().setCelda(2, 1, jugadorActual.getMarkup());
-
+			if (getTablero().getCelda(2, 1).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
+		case 'H':
+			if (getTablero().getCelda(2, 1).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
 		case 'i':
-			getTablero().setCelda(2, 2, jugadorActual.getMarkup());
-
+			if (getTablero().getCelda(2, 2).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
 			break;
-
+		case 'I':
+			if (getTablero().getCelda(2, 2).isOcupada() == false) {
+				correcto = true;
+			} else {
+				correcto = false;
+			}
+			break;
 		default:
-			getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+			correcto = false;
 			break;
 		}
+		return correcto;
+
+	}
+
+	public boolean pedirCoordenada(char coordenada, JUGADOR jugadorActual) {
+
+		boolean correcto = false;
+
+		if (comprobarCeldas(coordenada) == true) {
+
+			switch (coordenada) {
+			case 'a':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'A':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'b':
+				getTablero().setCelda(0, 1, jugadorActual.getMarkup());
+				break;
+			case 'B':
+				getTablero().setCelda(0, 1, jugadorActual.getMarkup());
+				break;
+			case 'c':
+				getTablero().setCelda(0, 2, jugadorActual.getMarkup());
+				break;
+			case 'C':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'd':
+				getTablero().setCelda(1, 0, jugadorActual.getMarkup());
+				break;
+			case 'D':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'e':
+				getTablero().setCelda(1, 1, jugadorActual.getMarkup());
+				break;
+			case 'E':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'f':
+				getTablero().setCelda(1, 2, jugadorActual.getMarkup());
+				break;
+			case 'F':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'g':
+				getTablero().setCelda(2, 0, jugadorActual.getMarkup());
+				break;
+			case 'G':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'h':
+				getTablero().setCelda(2, 1, jugadorActual.getMarkup());
+				break;
+			case 'H':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			case 'i':
+				getTablero().setCelda(2, 2, jugadorActual.getMarkup());
+				break;
+			case 'I':
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			default:
+				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				break;
+			}
+		} else {
+			correcto = false;
+		}
+		return correcto;
 
 	}
 
