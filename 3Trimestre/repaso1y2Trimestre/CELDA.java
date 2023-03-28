@@ -19,7 +19,7 @@ public class CELDA {
     private boolean ocupada;
     
     
-    public CELDA() {
+    public CELDA() { //añadir un if con los caracteres de las posiciones a -- i
         this.simbolo = ' ';
         this.fila=0;
         this.columna=0;
