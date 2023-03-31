@@ -183,11 +183,7 @@ public class GAME {
 			}
 			break;
 		case 'h':
-			if (getTablero().getCelda(2, 1).isOcupada() == false) {
-				correcto = true;
-			} else {
-				correcto = false;
-			}
+			correcto = !getTablero().getCelda(2, 1).isOcupada(); // uppercase & correcto=!
 			break;
 		case 'H':
 			if (getTablero().getCelda(2, 1).isOcupada() == false) {
@@ -368,4 +364,4 @@ public class GAME {
 		return isFinDePartida();
 	}
 
-}
+} //Permitir reiniciar el juego. 
