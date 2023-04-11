@@ -25,7 +25,7 @@ public class TABLERO extends CELDA{
 		return tableroDeJuego[fila][columna];
 	}
 
-	public void setCelda(int fila, int columna, char simbolo) {
+	public void setCelda(int fila, int columna, String simbolo) {
 		this.tableroDeJuego[fila][columna].setSimbolo(simbolo);
 		this.tableroDeJuego[fila][columna].setOcupada(true);
 	}

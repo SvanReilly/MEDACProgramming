@@ -27,17 +27,17 @@ public class TresEnRaya {
 		System.out.println(juego.getTablero());
 
 		JUGADOR jugadorActual = juego.getJugador1();
-		char coordenada;
+		String coordenada;
 
 		do {
 
 			System.out.println("Inserte un caracter de posicion (de 'a' hasta 'i'): ");
-			coordenada = sc.next().charAt(0);
+			coordenada = sc.next();
 			juego.comprobarCeldas(coordenada);
 
 			do {
 				System.out.println("Esa celda esta ocupada elija otra, por favor: ");
-				coordenada = sc.next().charAt(0);
+				coordenada = sc.next();
 				juego.comprobarCeldas(coordenada);
 
 			} while (!juego.pedirCoordenada(coordenada, jugadorActual));

@@ -13,14 +13,14 @@ package repaso1y2Trimestre;
  */
  
 public class CELDA {
-    private char simbolo;
+    private String simbolo;
     private int fila;
     private int columna;
     private boolean ocupada;
     
     
     public CELDA() { //anadir un if con los caracteres de las posiciones a -- i
-        this.simbolo = ' ';
+        this.simbolo = "";
         this.fila=0;
         this.columna=0;
         this.ocupada = false;
@@ -42,11 +42,11 @@ public class CELDA {
 		this.columna = columna;
 	}
 
-	public char getSimbolo() {
+	public String getSimbolo() {
         return simbolo;
     }
     
-    public void setSimbolo(char simbolo) {
+    public void setSimbolo(String simbolo) {
         this.simbolo = simbolo;
     }
     
