@@ -1,6 +1,6 @@
 package repaso1y2Trimestre;
 
-import java.util.Scanner;
+
 
 /**
  * @author Alejandro Ortega Maldonado
@@ -28,8 +28,8 @@ public class GAME {
 	 */
 	public GAME() {
 		this.tablero = new TABLERO();
-		this.jugador1 = new JUGADOR("Jugador 1", "X");
-		this.jugador2 = new JUGADOR("Jugador 2", "O");
+		this.jugador1 = new JUGADOR("\u001B[32m" + "Jugador 1" + "\u001B[0m", "X");
+		this.jugador2 = new JUGADOR("\u001B[36m" + "Jugador 2" + "\u001B[0m", "O");
 		this.finDePartida = false;
 		this.ganador = null;
 	}
@@ -113,7 +113,7 @@ public class GAME {
 			break;
 
 		case "H":
-			correcto = !getTablero().getCelda(2, 1).isOcupada(); // uppercase & correcto=!
+			correcto = !getTablero().getCelda(2, 1).isOcupada();
 			break;
 
 		case "I":
@@ -132,7 +132,7 @@ public class GAME {
 
 		boolean correcto = false;
 
-		if (comprobarCeldas(coordenada) == true) {
+		if (comprobarCeldas(coordenada.toUpperCase()) == true) {
 
 			switch (coordenada.toUpperCase()) {
 			case "A":
