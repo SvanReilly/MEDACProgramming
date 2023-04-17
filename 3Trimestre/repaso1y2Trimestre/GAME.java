@@ -1,7 +1,5 @@
 package repaso1y2Trimestre;
 
-
-
 /**
  * @author Alejandro Ortega Maldonado
  * @author Aaron Rodriguez Gonzalez
@@ -84,6 +82,7 @@ public class GAME {
 	public boolean comprobarCeldas(String coordenada) {
 		boolean correcto = false;
 		switch (coordenada.toUpperCase()) {
+
 		case "A":
 			correcto = !getTablero().getCelda(0, 0).isOcupada();
 			break;
@@ -132,12 +131,13 @@ public class GAME {
 
 		boolean correcto = false;
 
-		if (comprobarCeldas(coordenada.toUpperCase()) == true) {
+		if (comprobarCeldas(coordenada.toUpperCase())) {
 
 			switch (coordenada.toUpperCase()) {
 			case "A":
 				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
 				break;
+
 			case "B":
 				getTablero().setCelda(0, 1, jugadorActual.getMarkup());
 				break;
@@ -189,11 +189,13 @@ public class GAME {
 	 *         previamente.
 	 */
 	public JUGADOR cambiarJugador(JUGADOR jugadorActual) {
+		JUGADOR jugadorActual2 = new JUGADOR ();
 		if (jugadorActual == this.jugador1) {
-			return this.jugador2;
+			jugadorActual2= this.jugador2;
 		} else {
-			return this.jugador1;
+			jugadorActual2= this.jugador1;
 		}
+		return jugadorActual2;
 	}
 
 	/**
@@ -245,13 +247,14 @@ public class GAME {
 	 *         ocupadas, pero no hay un ganador, en dicho caso habria empate.
 	 */
 	public boolean comprobarEmpate() {
+
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (!this.tablero.getCelda(i, j).isOcupada()) {
-					// Todavia hay celdas vacias, por lo que no hay empate.
-					setFinDePartida(false);
-				} else {
+				if (getTablero().getCelda(i, j).isOcupada()) {
 					setFinDePartida(true);
+
+				} else {
+					setFinDePartida(false);
 				}
 			}
 		}

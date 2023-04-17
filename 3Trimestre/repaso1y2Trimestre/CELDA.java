@@ -20,7 +20,7 @@ public class CELDA {
     
     
     public CELDA() { //anadir un if con los caracteres de las posiciones a -- i
-        this.simbolo = "";
+        this.simbolo = " ";
         this.fila=0;
         this.columna=0;
         this.ocupada = false;
