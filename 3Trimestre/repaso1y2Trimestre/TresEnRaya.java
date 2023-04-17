@@ -77,6 +77,11 @@ public class TresEnRaya {
 			System.out.println(jugadorActual.getName());
 			
 			
+			game.cambiarJugador(game.getJugador1());
+			
+			game.comprobarEmpate();
+			game.comprobarVictoria(jugadorActual);
+			
 			
 		} while (!game.isFinDePartida());
 
