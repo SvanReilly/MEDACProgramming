@@ -29,7 +29,7 @@ public class GAME {
 		this.tablero = new TABLERO();
 		this.jugador1 = new JUGADOR("\u001B[32m" + "Jugador 1" + "\u001B[0m", "X");
 		this.jugador2 = new JUGADOR("\u001B[36m" + "Jugador 2" + "\u001B[0m", "O");
-		this.jugadorActual = new JUGADOR("Test", "T");
+		this.jugadorActual = new JUGADOR("TEST", "T");
 		this.finDePartida = false;
 		this.ganador = null;
 	}
@@ -94,43 +94,43 @@ public class GAME {
 		switch (coordenada.toUpperCase()) {
 
 		case "A":
-			correcto = getTablero().getCelda(0, 0).isOcupada();
+			correcto = this.tablero.getCelda(0, 0).isOcupada();
 			break;
 
 		case "B":
-			correcto = getTablero().getCelda(0, 1).isOcupada();
+			correcto = this.tablero.getCelda(0, 1).isOcupada();
 			break;
 
 		case "C":
-			correcto = getTablero().getCelda(0, 2).isOcupada();
+			correcto = this.tablero.getCelda(0, 2).isOcupada();
 			break;
 
 		case "D":
-			correcto = getTablero().getCelda(1, 0).isOcupada();
+			correcto = this.tablero.getCelda(1, 0).isOcupada();
 			break;
 
 		case "E":
-			correcto = getTablero().getCelda(1, 1).isOcupada();
+			correcto = this.tablero.getCelda(1, 1).isOcupada();
 			break;
 
 		case "F":
-			correcto = getTablero().getCelda(1, 2).isOcupada();
+			correcto = this.tablero.getCelda(1, 2).isOcupada();
 			break;
 
 		case "G":
-			correcto = getTablero().getCelda(2, 0).isOcupada();
+			correcto = this.tablero.getCelda(2, 0).isOcupada();
 			break;
 
 		case "H":
-			correcto = getTablero().getCelda(2, 1).isOcupada();
+			correcto = this.tablero.getCelda(2, 1).isOcupada();
 			break;
 
 		case "I":
-			correcto = getTablero().getCelda(2, 2).isOcupada();
+			correcto = this.tablero.getCelda(2, 2).isOcupada();
 			break;
 
 		default:
-			correcto = false;
+			correcto = true;
 			break;
 		}
 		return correcto;
@@ -139,51 +139,50 @@ public class GAME {
 
 	public void pedirCoordenada(String coordenada, JUGADOR jugadorActual) {
 
-
-		if (comprobarCeldas(coordenada.toUpperCase())) {
+		if (!comprobarCeldas(coordenada.toUpperCase())) {
 
 			switch (coordenada.toUpperCase()) {
 			case "A":
-				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				this.tablero.setCelda(0, 0, jugadorActual.getMarkup());
 				break;
 
 			case "B":
-				getTablero().setCelda(0, 1, jugadorActual.getMarkup());
+				this.tablero.setCelda(0, 1, jugadorActual.getMarkup());
 				break;
 
 			case "C":
-				getTablero().setCelda(0, 2, jugadorActual.getMarkup());
+				this.tablero.setCelda(0, 2, jugadorActual.getMarkup());
 				break;
 
 			case "D":
-				getTablero().setCelda(1, 0, jugadorActual.getMarkup());
+				this.tablero.setCelda(1, 0, jugadorActual.getMarkup());
 				break;
 
 			case "E":
-				getTablero().setCelda(1, 1, jugadorActual.getMarkup());
+				this.tablero.setCelda(1, 1, jugadorActual.getMarkup());
 				break;
 
 			case "F":
-				getTablero().setCelda(1, 2, jugadorActual.getMarkup());
+				this.tablero.setCelda(1, 2, jugadorActual.getMarkup());
 				break;
 
 			case "G":
-				getTablero().setCelda(2, 0, jugadorActual.getMarkup());
+				this.tablero.setCelda(2, 0, jugadorActual.getMarkup());
 				break;
 
 			case "H":
-				getTablero().setCelda(2, 1, jugadorActual.getMarkup());
+				this.tablero.setCelda(2, 1, jugadorActual.getMarkup());
 				break;
 
 			case "I":
-				getTablero().setCelda(2, 2, jugadorActual.getMarkup());
+				this.tablero.setCelda(2, 2, jugadorActual.getMarkup());
 				break;
 
 			default:
-				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
+				this.tablero.setCelda(0, 0, jugadorActual.getMarkup());
 				break;
 			}
-		} 
+		}
 	}
 
 	/**
@@ -193,12 +192,12 @@ public class GAME {
 	 * @return Devolvera al jugador1 o jugador2 dependiendo de cual tenga asignado
 	 *         previamente.
 	 */
-	public void cambiarJugador(JUGADOR jugadorActual) {
+	public void cambiarJugador(JUGADOR jugador) {
 
-		if (this.jugadorActual == this.jugador1) {
-			setJugadorActual(this.jugador2);
+		if (this.jugadorActual == jugador1) {
+			this.jugadorActual = jugador2;
 		} else {
-			setJugadorActual(this.jugador1);
+			this.jugadorActual = jugador1;
 		}
 	}
 
@@ -216,6 +215,7 @@ public class GAME {
 					&& tablero.getCelda(fila, 1).getSimbolo() == jugador.getMarkup()
 					&& tablero.getCelda(fila, 2).getSimbolo() == jugador.getMarkup()) {
 				setFinDePartida(true);
+				setGanador(jugador);
 			}
 		}
 
@@ -225,6 +225,7 @@ public class GAME {
 					&& tablero.getCelda(1, columna).getSimbolo() == jugador.getMarkup()
 					&& tablero.getCelda(2, columna).getSimbolo() == jugador.getMarkup()) {
 				setFinDePartida(true);
+				setGanador(jugador);
 			}
 		}
 
@@ -233,18 +234,20 @@ public class GAME {
 				&& tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup()
 				&& tablero.getCelda(2, 2).getSimbolo() == jugador.getMarkup()) {
 			setFinDePartida(true);
+			setGanador(jugador);
 		}
 
 		if (getTablero().getCelda(2, 0).getSimbolo() == jugador.getMarkup()
 				&& tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup()
 				&& tablero.getCelda(0, 2).getSimbolo() == jugador.getMarkup()) {
 			setFinDePartida(true);
+			setGanador(jugador);
 		}
-		setGanador(jugador);
+		
 		return isFinDePartida();
 	}
 
-	/**
+	/*
 	 * @author Alejandro Ortega Maldonado
 	 * @version 1.0
 	 * @return Devuelve un booleano en funcion de si todas las celdas estan
@@ -254,9 +257,9 @@ public class GAME {
 		int contadorOcupadas = 0;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (!getTablero().getCelda(i, j).isOcupada()) {
+				if (this.tablero.getCelda(i, j).isOcupada()) {
 					contadorOcupadas++;
-				} 
+				}
 			}
 		}
 		if (contadorOcupadas == 9) {
@@ -268,4 +271,4 @@ public class GAME {
 		return isFinDePartida();
 	}
 
-} 
+}

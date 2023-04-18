@@ -40,43 +40,47 @@ public class TresEnRaya {
 			
 			GAME game = new GAME();
 
-			TABLERO tablero = game.getTablero();
-
-			JUGADOR jugador1 = game.getJugador1();
-			JUGADOR jugador2 = game.getJugador2();
-			JUGADOR jActual = game.getJugadorActual();
-			JUGADOR ganador = game.getGanador();
-		
-
-
-
+			
 			System.out.println(ANSI_RED + "THREE " + ANSI_RESET + ANSI_YELLOW + "INNA' " + ANSI_RESET + ANSI_GREEN + "ROW."
 					+ ANSI_RESET);
 
 			System.out.println("Introduzca su nombre (PJ1, marca 'X'): ");
-			jugador1.setName(ANSI_GREEN + sc.next() + ANSI_RESET);
-			jugador1.setMarkup("X");
+			game.getJugador1().setName(ANSI_GREEN + sc.next() + ANSI_RESET);
+			game.getJugador1().setMarkup("X");
 			System.out.println("Introduzca su nombre (PJ2, marca '0'): ");
-			jugador2.setName(ANSI_CYAN + sc.next() + ANSI_RESET);
-			jugador2.setMarkup("O");
+			game.getJugador2().setName(ANSI_CYAN + sc.next() + ANSI_RESET);
+			game.getJugador2().setMarkup("O");
+			game.setJugadorActual(game.getJugador1());
+			
+			 do {
 
-			while (game.isFinDePartida()) {
-				String coordenada;
+				System.out.println("\nTurno de : " + game.getJugadorActual().getName());
 				System.out.println(game.getTablero());
 
+			
 				System.out.println("Inserte una posicion para su marca (desde A - I): ");
-				game.pedirCoordenada(sc.next(), jActual);
-				System.out.println(jActual.getName());
+				String coordenada= sc.next();
 
-				game.cambiarJugador(game.getJugador1());
+				game.pedirCoordenada(coordenada, game.getJugadorActual());
+				System.out.println(game.getTablero());
+				game.cambiarJugador(game.getJugadorActual());
 
 				game.comprobarEmpate();
-				game.comprobarVictoria(jActual);
+				game.comprobarVictoria(game.getJugador1());
+				game.comprobarVictoria(game.getJugador2());
 
+			} while (game.isFinDePartida()==false);
+			 
+			 if (game.getGanador()!=null) {
+				 System.out.println(game.getGanador().getName() + " es nuestro ganador.");
+			} else {
+				System.out.println(ANSI_CYAN+ "Ha habido un empate entre estos dos titanes: " + ANSI_RESET
+						+ "\n - " + game.getJugador1().getName()
+						+ "\n - " + game.getJugador2().getName());
 			}
-
+			 
 			
-			System.out.println("\nJugar otra partida? (Y/N): ");
+			System.out.println(ANSI_YELLOW+ "\nJugar otra partida? (Y/N): " + ANSI_RESET);
 			playAgainAnswer = sc.next();
 			
 			switch (playAgainAnswer.toUpperCase()) {

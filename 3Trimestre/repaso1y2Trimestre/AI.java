@@ -17,16 +17,5 @@ public class AI extends JUGADOR {
 		this.heuristica = heuristica;
 	}
 
-	@Override
-	public char getMarkup() {
-		// TODO Auto-generated method stub
-		return super.getMarkup();
-	}
-
-	@Override
-	public boolean setMarkup(JUGADOR player) {
-		// TODO Auto-generated method stub
-		return super.setMarkup(player);
-	}
 
 }
