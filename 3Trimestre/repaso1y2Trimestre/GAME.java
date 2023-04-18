@@ -13,6 +13,7 @@ public class GAME {
 	private TABLERO tablero;
 	private JUGADOR jugador1;
 	private JUGADOR jugador2;
+	private JUGADOR jugadorActual;
 	private boolean finDePartida;
 	private JUGADOR ganador;
 
@@ -28,6 +29,7 @@ public class GAME {
 		this.tablero = new TABLERO();
 		this.jugador1 = new JUGADOR("\u001B[32m" + "Jugador 1" + "\u001B[0m", "X");
 		this.jugador2 = new JUGADOR("\u001B[36m" + "Jugador 2" + "\u001B[0m", "O");
+		this.jugadorActual = new JUGADOR("Test", "T");
 		this.finDePartida = false;
 		this.ganador = null;
 	}
@@ -54,6 +56,14 @@ public class GAME {
 
 	public void setJugador2(JUGADOR jugador2) {
 		this.jugador2 = jugador2;
+	}
+
+	public JUGADOR getJugadorActual() {
+		return jugadorActual;
+	}
+
+	public void setJugadorActual(JUGADOR jugadorActual) {
+		this.jugadorActual = jugadorActual;
 	}
 
 	public boolean isFinDePartida() {
@@ -84,39 +94,39 @@ public class GAME {
 		switch (coordenada.toUpperCase()) {
 
 		case "A":
-			correcto = !getTablero().getCelda(0, 0).isOcupada();
+			correcto = getTablero().getCelda(0, 0).isOcupada();
 			break;
 
 		case "B":
-			correcto = !getTablero().getCelda(0, 1).isOcupada();
+			correcto = getTablero().getCelda(0, 1).isOcupada();
 			break;
 
 		case "C":
-			correcto = !getTablero().getCelda(0, 2).isOcupada();
+			correcto = getTablero().getCelda(0, 2).isOcupada();
 			break;
 
 		case "D":
-			correcto = !getTablero().getCelda(1, 0).isOcupada();
+			correcto = getTablero().getCelda(1, 0).isOcupada();
 			break;
 
 		case "E":
-			correcto = !getTablero().getCelda(1, 1).isOcupada();
+			correcto = getTablero().getCelda(1, 1).isOcupada();
 			break;
 
 		case "F":
-			correcto = !getTablero().getCelda(1, 2).isOcupada();
+			correcto = getTablero().getCelda(1, 2).isOcupada();
 			break;
 
 		case "G":
-			correcto = !getTablero().getCelda(2, 0).isOcupada();
+			correcto = getTablero().getCelda(2, 0).isOcupada();
 			break;
 
 		case "H":
-			correcto = !getTablero().getCelda(2, 1).isOcupada();
+			correcto = getTablero().getCelda(2, 1).isOcupada();
 			break;
 
 		case "I":
-			correcto = !getTablero().getCelda(2, 2).isOcupada();
+			correcto = getTablero().getCelda(2, 2).isOcupada();
 			break;
 
 		default:
@@ -127,9 +137,8 @@ public class GAME {
 
 	}
 
-	public boolean pedirCoordenada(String coordenada, JUGADOR jugadorActual) {
+	public void pedirCoordenada(String coordenada, JUGADOR jugadorActual) {
 
-		boolean correcto = false;
 
 		if (comprobarCeldas(coordenada.toUpperCase())) {
 
@@ -174,11 +183,7 @@ public class GAME {
 				getTablero().setCelda(0, 0, jugadorActual.getMarkup());
 				break;
 			}
-		} else {
-			correcto = false;
-		}
-		return correcto;
-
+		} 
 	}
 
 	/**
@@ -188,14 +193,13 @@ public class GAME {
 	 * @return Devolvera al jugador1 o jugador2 dependiendo de cual tenga asignado
 	 *         previamente.
 	 */
-	public JUGADOR cambiarJugador(JUGADOR jugadorActual) {
-		JUGADOR jugadorActual2 = new JUGADOR ();
-		if (jugadorActual == this.jugador1) {
-			jugadorActual2= this.jugador2;
+	public void cambiarJugador(JUGADOR jugadorActual) {
+
+		if (this.jugadorActual == this.jugador1) {
+			setJugadorActual(this.jugador2);
 		} else {
-			jugadorActual2= this.jugador1;
+			setJugadorActual(this.jugador1);
 		}
-		return jugadorActual2;
 	}
 
 	/**
@@ -208,7 +212,7 @@ public class GAME {
 	public boolean comprobarVictoria(JUGADOR jugador) {
 		// Comprobar filas
 		for (int fila = 0; fila < 3; fila++) {
-			if (tablero.getCelda(fila, 0).getSimbolo() == jugador.getMarkup()
+			if (getTablero().getCelda(fila, 0).getSimbolo() == jugador.getMarkup()
 					&& tablero.getCelda(fila, 1).getSimbolo() == jugador.getMarkup()
 					&& tablero.getCelda(fila, 2).getSimbolo() == jugador.getMarkup()) {
 				setFinDePartida(true);
@@ -217,7 +221,7 @@ public class GAME {
 
 		// Comprobar columnas
 		for (int columna = 0; columna < 3; columna++) {
-			if (tablero.getCelda(0, columna).getSimbolo() == jugador.getMarkup()
+			if (getTablero().getCelda(0, columna).getSimbolo() == jugador.getMarkup()
 					&& tablero.getCelda(1, columna).getSimbolo() == jugador.getMarkup()
 					&& tablero.getCelda(2, columna).getSimbolo() == jugador.getMarkup()) {
 				setFinDePartida(true);
@@ -225,13 +229,13 @@ public class GAME {
 		}
 
 		// Comprobar diagonales
-		if (tablero.getCelda(0, 0).getSimbolo() == jugador.getMarkup()
+		if (getTablero().getCelda(0, 0).getSimbolo() == jugador.getMarkup()
 				&& tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup()
 				&& tablero.getCelda(2, 2).getSimbolo() == jugador.getMarkup()) {
 			setFinDePartida(true);
 		}
 
-		if (tablero.getCelda(2, 0).getSimbolo() == jugador.getMarkup()
+		if (getTablero().getCelda(2, 0).getSimbolo() == jugador.getMarkup()
 				&& tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup()
 				&& tablero.getCelda(0, 2).getSimbolo() == jugador.getMarkup()) {
 			setFinDePartida(true);
@@ -247,19 +251,21 @@ public class GAME {
 	 *         ocupadas, pero no hay un ganador, en dicho caso habria empate.
 	 */
 	public boolean comprobarEmpate() {
-
+		int contadorOcupadas = 0;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (getTablero().getCelda(i, j).isOcupada()) {
-					setFinDePartida(true);
-
-				} else {
-					setFinDePartida(false);
-				}
+				if (!getTablero().getCelda(i, j).isOcupada()) {
+					contadorOcupadas++;
+				} 
 			}
+		}
+		if (contadorOcupadas == 9) {
+			setFinDePartida(true);
+		} else {
+			setFinDePartida(false);
 		}
 
 		return isFinDePartida();
 	}
 
-} // Permitir reiniciar el juego.
+} 

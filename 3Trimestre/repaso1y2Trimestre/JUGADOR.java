@@ -33,16 +33,9 @@ public class JUGADOR {
 		return markup;
 	}
 
-	public boolean setMarkup(JUGADOR player) {
-		boolean correcto;
-		if (player.getMarkup() == "X") {
-			markup = "O";
-			correcto = true;
-		} else {
-			this.markup = "X";
-			correcto = false;
-		}
-		return correcto;
+	public void setMarkup(String markup) {
+		this.markup=markup;
+
 	}
 
 	public String getName() {
