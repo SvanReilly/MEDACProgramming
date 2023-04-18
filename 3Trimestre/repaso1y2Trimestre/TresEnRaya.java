@@ -37,7 +37,6 @@ public class TresEnRaya {
 		
 		do {
 
-			
 			GAME game = new GAME();
 
 			
@@ -60,10 +59,14 @@ public class TresEnRaya {
 			
 				System.out.println("Inserte una posicion para su marca (desde A - I): ");
 				String coordenada= sc.next();
-
-				game.pedirCoordenada(coordenada, game.getJugadorActual());
-				System.out.println(game.getTablero());
-				game.cambiarJugador(game.getJugadorActual());
+				if (!game.comprobarCeldas(coordenada)) {
+					game.pedirCoordenada(coordenada, game.getJugadorActual());
+					System.out.println(game.getTablero());
+					game.cambiarJugador(game.getJugadorActual());
+				} else {
+					System.out.println(ANSI_RED +"Por favor, elija una casilla valida: " + ANSI_RESET);
+				}
+				
 
 				game.comprobarEmpate();
 				game.comprobarVictoria(game.getJugador1());
@@ -72,9 +75,9 @@ public class TresEnRaya {
 			} while (game.isFinDePartida()==false);
 			 
 			 if (game.getGanador()!=null) {
-				 System.out.println(game.getGanador().getName() + " es nuestro ganador.");
+				 System.out.println(game.getGanador().getName() + ANSI_PURPLE + " es nuestro ganador." + ANSI_RESET);
 			} else {
-				System.out.println(ANSI_CYAN+ "Ha habido un empate entre estos dos titanes: " + ANSI_RESET
+				System.out.println(ANSI_PURPLE+ "Ha habido un empate entre estos dos titanes: " + ANSI_RESET
 						+ "\n - " + game.getJugador1().getName()
 						+ "\n - " + game.getJugador2().getName());
 			}

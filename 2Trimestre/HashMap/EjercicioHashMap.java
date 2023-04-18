@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class EjercicioHashMap {
-	// Claves únicas (primero, valores igual o distinto. (segundo
+	// Claves ï¿½nicas (primero, valores igual o distinto. (segundo
 	public static void main(String[] args) {
 
 		HashMap<Integer, String> mapa = new HashMap<Integer, String>();
@@ -14,7 +14,7 @@ public class EjercicioHashMap {
 		mapa.put(1, "Enricardo");
 		mapa.put(2, "Alex");
 		mapa.put(3, "Dani");
-		mapa.put(4, "Adrián");
+		mapa.put(4, "Adrian");
 
 		for (Entry i : mapa.entrySet()) { // itera todos los elementos del mapa llamandolos i
 			System.out.println(i.getKey());

@@ -1,6 +1,6 @@
 package repaso1y2Trimestre;
 
-public class MAINTEST {
+public class TESTMAIN {
 
 	public static void main(String[] args) {
 		
@@ -30,19 +30,20 @@ public class MAINTEST {
 		*/
 		
 		
-		test.pedirCoordenada("A", test.getJugador2());
-		test.pedirCoordenada("B", test.getJugador1());
-		test.pedirCoordenada("C", test.getJugador2());
+		test.pedirCoordenada("A", test.getJugador1());
+		test.pedirCoordenada("B", test.getJugador2());
+		test.pedirCoordenada("C", test.getJugador1());
 		
-		test.pedirCoordenada("D", test.getJugador1());
-		test.pedirCoordenada("E", test.getJugador2());
-		test.pedirCoordenada("F", test.getJugador1());
+		test.pedirCoordenada("D", test.getJugador2());
+		test.pedirCoordenada("E", test.getJugador1());
+		test.pedirCoordenada("F", test.getJugador2());
 		
-		test.pedirCoordenada("G", test.getJugador1());
-		test.pedirCoordenada("H", test.getJugador2());
-		test.pedirCoordenada("I", test.getJugador1());
+		test.pedirCoordenada("G", test.getJugador2());
+		test.pedirCoordenada("H", test.getJugador1());
+		test.pedirCoordenada("I", test.getJugador2());
 		
-		System.out.println(test.comprobarCeldas("A") 
+		System.out.println(test.comprobarCeldas("A"));
+	/*	System.out.println(test.comprobarCeldas("A") 
 				+ " " + test.comprobarCeldas("B")
 				+ " " + test.comprobarCeldas("C")
 				+ "\n" + test.comprobarCeldas("D")
@@ -57,7 +58,7 @@ System.out.println(test.comprobarEmpate());
 		
 		System.out.println(test.getTablero());
 		
-		
+		*/
 		
 		
 		
