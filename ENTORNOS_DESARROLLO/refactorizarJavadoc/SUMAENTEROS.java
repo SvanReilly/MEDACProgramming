@@ -8,47 +8,51 @@ package refactorizarJavadoc;
  * @author Alejandro Ortega Maldonado
  * 
  *         Este programa contiene una clase principal llamada SUMAENTEROS que
- *         realiza la suma de dos números enteros utilizando dos métodos: - El
- *         método 'sumar' que recibe dos enteros como parámetros y devuelve la
- *         suma de ambos. - El método 'imprimirResultado' que imprime en consola
- *         el resultado de la suma de dos números enteros junto con los números
- *         utilizados. El programa realiza varias sumas con diferentes números
- *         de ejemplo utilizando los métodos mencionados.
+ *         realiza la suma de dos numeros enteros utilizando dos metodos estaticos.
+ *         
  */
 
 public class SUMAENTEROS {
 
-	   /** Realiza la suma de dos números enteros.
+	   /** Realiza la suma de dos numeros enteros.
 	 	* 
-	 	* @param a Primer número entero a sumar.
+	 	* @param a Primer numero entero a sumar.
 	 	* 
-	 	* @param b Segundo número entero a sumar.
+	 	* @param b Segundo numero entero a sumar.
 	 	* 
-	 	* @return La suma de los dos números enteros.
+	 	* @return La suma de los dos numeros enteros.
 	 	*/
 	public static int sumar(int a, int b) {
 		return a + b;
 	}
 
 	  /**
-	   * Imprime en consola el resultado de la suma de dos números enteros junto con los números utilizados.
+	   * Metodo que imprime en consola el resultado de la suma de dos numeros enteros junto con los numeros utilizados.
 	   * 
-	   * @param a Primer número entero sumado.
-	   * @param b Segundo número entero sumado.
-	   * @param resultado El resultado de la suma de los dos números enteros.
+	   * @param a Primer numero entero sumado.
+	   * @param b Segundo numero entero sumado.
+	   * @param resultado El resultado de la suma de los dos numeros enteros.
 	   */
 	public static void imprimirResultado(int a, int b, int resultado) {
 		System.out.println("La suma de " + a + " y " + b + " es " + resultado);
 	}
 
 	
-	  /**
-	   * Imprime en consola el resultado de la suma de dos números enteros junto con los números utilizados.
-	   * 
-	   * @param num1, num2, num3, num4, num5, num6 Primer número entero sumado.
-	   * @param  Segundo número entero sumado.
-	   * @param resultado1, resultado2, resultado3 variable de tipo entero que almacena los diferentes resultados.
-	   */
+	  	/**
+		 * Metodo que imprime en consola el resultado de la suma de dos numeros enteros junto con
+		 * los numeros utilizados.
+		 * 
+		 * @param num1 variable de tipo entero que almacena un valor.
+		 * @param num2 variable de tipo entero que almacena un valor.
+		 * @param num3 variable de tipo entero que almacena un valor.
+		 * @param num4 variable de tipo entero que almacena un valor.
+		 * @param num5 variable de tipo entero que almacena un valor.
+		 * @param num6 variable de tipo entero que almacena un valor.
+		 * @param resultado1 variable de tipo entero que almacena el 1er resultado.
+		 * @param resultado2 variable de tipo entero que almacena el 2do resultado.
+		 * @param resultado3 variable de tipo entero que almacena el 3er resultado.
+		 *                    
+		 */
 	public static void main(String[] args) {
 		int num1 = 2, num2 = 3;
 		int resultado1 = sumar(num1, num2);
