@@ -20,6 +20,7 @@ public class OPTIMIZACION {
 	 * @version 2.0
 	 * @since 2023/04/19
 	 * @author Alejandro Ortega Maldonado
+	 * @param arrayEnteros array de tipo entero el cual será recorrido por el metodo para obtener finalmente el valor mas alto de entre todas las posiciones del mismo.
 	 * 
 	 */
 	public static int valorMax(int[] arrayEnteros) {
