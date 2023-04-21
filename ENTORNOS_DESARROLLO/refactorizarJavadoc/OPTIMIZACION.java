@@ -1,4 +1,6 @@
-public class Optimizacion{
+package refactorizarJavadoc;
+
+public class OPTIMIZACION{
     public static int f1(int a, int b) {
         int c = 0;
         for (int i = 0; i < b; i++) {
@@ -61,3 +63,45 @@ public class Optimizacion{
         System.out.println("El ??? de " + num + " es " + fa);
     }
 }
+
+
+/*
+ * public static int productoInts(int factor1, int factor2) {
+        int resultadoProducto = factor1*factor2;
+     
+        return resultadoProducto;
+    }
+
+
+    public static int factorialNumIns(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorialNumIns(n-1);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Producto de Enteros
+        int a = 5;
+        int b = 5;
+        int ar = productoInts(a, b);
+        System.out.println("El producto de los enteros insertados es " + ar);
+
+        // prueba f2
+        int[] arr = {5, 2, 7, 4, 1, 9};
+        int m = f2(arr);
+        System.out.println("El tamaño del array es " + m);
+
+        // prueba f3
+        int ba = 3;
+        int ex = 4;
+        int resultado = f3(ba, ex);
+        System.out.println(ba + " ??? a " + ex + " es igual a " + resultado);
+
+        // prueba f4
+        int numeroInsertado = 6;
+        int factorialNumIns = factorialNumIns(numeroInsertado);
+        System.out.println("El factorial de " + numeroInsertado + " es " + factorialNumIns);
+    }
+ */
