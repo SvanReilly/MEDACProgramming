@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @param jugadorActual
  * @param fila
  * @param columna
+ * @param coordenada
  * 
  * @see repaso1y2Trimestre.CELDA
  * @see repaso1y2Trimestre.GAME
