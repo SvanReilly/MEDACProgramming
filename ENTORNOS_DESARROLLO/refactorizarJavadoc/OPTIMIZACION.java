@@ -18,6 +18,7 @@ public class OPTIMIZACION {
 	 * @version 2.0
 	 * @since 2023/04/19
 	 * @author Alejandro Ortega Maldonado
+	 * 
 	 */
 	public static int valorMax(int[] arrayEnteros) {
 		int maxValue = -1000000;
@@ -51,7 +52,7 @@ public class OPTIMIZACION {
 	 * @author Alejandro Ortega Maldonado
 	 * @param numInsertado
 	 * @return factorial Devuelve el resultado del factorial del numero insertado
-	 *         por parametro
+	 *         por parametro.
 	 */
 	public static int factorialNumIns(int numInsertado) {
 		int factorial;
@@ -61,6 +62,11 @@ public class OPTIMIZACION {
 		} else {
 			factorial = numInsertado * factorialNumIns(numInsertado - 1);
 		}
+		
+		
+	/*	for (int i = 0; i < numInsertado; i++) {
+			factorial = numInsertado * factorialNumIns(numInsertado - 1);
+		}*/
 		return factorial;
 	}
 
@@ -68,7 +74,7 @@ public class OPTIMIZACION {
 	 * @version 2.0
 	 * @since 2023/04/19
 	 * @author Alejandro Ortega Maldonado
-	 * @param args un array de Strings
+	 * @param args un array de Strings.
 	 * 
 	 */
 	public static void main(String[] args) {
