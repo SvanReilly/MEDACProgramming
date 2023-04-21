@@ -46,8 +46,8 @@ public class OPTIMIZACION{
 	 * @since 2023/04/19
 	 * @author Alejandro Ortega Maldonado
 	 * @param numInsertado
-	 * @return factorial Devuelve el resultado del factorial del numero insertado 
-	 * por parametro
+	 * @return factorial Devuelve el resultado del factorial del 
+	 * numero insertado por parametro
      */
     public static int factorialNumIns(int numInsertado) {
         int factorial;
@@ -63,6 +63,7 @@ public class OPTIMIZACION{
 	 * @version 2.0
 	 * @since 2023/04/19
 	 * @author Alejandro Ortega Maldonado
+	 * @param args un array de Strings
 	 * 
      */
     public static void main(String[] args) {
