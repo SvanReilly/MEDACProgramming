@@ -203,7 +203,7 @@ public class GAME {
 
 	/**
 	 * @author Alejandro Ortega Maldonado
-	 * @version 1.0
+	 * @version 1.1
 	 * @param jugador
 	 * @return Devolvera un booleano si la partida ha terminado por victoria de
 	 *         algun jugador
@@ -211,9 +211,9 @@ public class GAME {
 	public boolean comprobarVictoria(JUGADOR jugador) {
 		// Comprobar filas
 		for (int fila = 0; fila < 3; fila++) {
-			if (getTablero().getCelda(fila, 0).getSimbolo() == jugador.getMarkup()
-					&& tablero.getCelda(fila, 1).getSimbolo() == jugador.getMarkup()
-					&& tablero.getCelda(fila, 2).getSimbolo() == jugador.getMarkup()) {
+			if (getTablero().getCelda(fila, 0).getSimbolo().equals(jugador.getMarkup())
+					&& getTablero().getCelda(fila, 1).getSimbolo().equals(jugador.getMarkup())
+					&& getTablero().getCelda(fila, 2).getSimbolo().equals(jugador.getMarkup())) {
 				setFinDePartida(true);
 				setGanador(jugador);
 			}
@@ -221,37 +221,86 @@ public class GAME {
 
 		// Comprobar columnas
 		for (int columna = 0; columna < 3; columna++) {
-			if (getTablero().getCelda(0, columna).getSimbolo() == jugador.getMarkup()
-					&& tablero.getCelda(1, columna).getSimbolo() == jugador.getMarkup()
-					&& tablero.getCelda(2, columna).getSimbolo() == jugador.getMarkup()) {
+			if (getTablero().getCelda(0, columna).getSimbolo().equals(jugador.getMarkup())
+					&& getTablero().getCelda(1, columna).getSimbolo().equals(jugador.getMarkup())
+					&& getTablero().getCelda(2, columna).getSimbolo().equals(jugador.getMarkup())) {
 				setFinDePartida(true);
 				setGanador(jugador);
 			}
 		}
 
 		// Comprobar diagonales
-		if (getTablero().getCelda(0, 0).getSimbolo() == jugador.getMarkup()
-				&& tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup()
-				&& tablero.getCelda(2, 2).getSimbolo() == jugador.getMarkup()) {
+		if (getTablero().getCelda(0, 0).getSimbolo().equals(jugador.getMarkup())
+				&& getTablero().getCelda(1, 1).getSimbolo().equals(jugador.getMarkup())
+				&& getTablero().getCelda(2, 2).getSimbolo().equals(jugador.getMarkup())) {
 			setFinDePartida(true);
 			setGanador(jugador);
 		}
 
-		if (getTablero().getCelda(2, 0).getSimbolo() == jugador.getMarkup()
-				&& tablero.getCelda(1, 1).getSimbolo() == jugador.getMarkup()
-				&& tablero.getCelda(0, 2).getSimbolo() == jugador.getMarkup()) {
+		if (getTablero().getCelda(2, 0).getSimbolo().equals(jugador.getMarkup())
+				&& getTablero().getCelda(1, 1).getSimbolo().equals(jugador.getMarkup())
+				&& getTablero().getCelda(0, 2).getSimbolo().equals(jugador.getMarkup())) {
 			setFinDePartida(true);
 			setGanador(jugador);
 		}
-		
+
+		return isFinDePartida();
+	}
+
+	/**
+	 * 
+	 * @author Alejandro Ortega Maldonado
+	 * @version 1.0
+	 * @param jugador
+	 * @return isFinDePartida
+	 * @deprecated
+	 *
+	 */
+	public boolean comprobarVictoria1(JUGADOR jugador) {
+		int contador, filas, columnas;
+		// Comprobar filas 1.0
+		for (filas = 0; filas < 3; filas++) {
+			contador = 0;
+			for (columnas = 0; columnas < 3; columnas++) {
+				if (getTablero().getCelda(filas, columnas).getSimbolo().equals(jugador.getMarkup())) {
+					contador++;
+				}
+			}
+			if (contador == 3) {
+				setGanador(jugador);
+				setFinDePartida(true);
+			} else {
+				setFinDePartida(false);
+			}
+
+		}
+		// Comprobar columnas 1.0
+		for (columnas = 0; columnas < 3; columnas++) {
+			contador = 0;
+			for (filas = 0; filas < 3; filas++) {
+				if (getTablero().getCelda(filas, columnas).getSimbolo().equals(jugador.getMarkup())) {
+					contador++;
+				}
+			}
+
+			if (contador == 3) {
+				setGanador(jugador);
+				setFinDePartida(true);
+			} else {
+				setFinDePartida(false);
+			}
+
+		}
 		return isFinDePartida();
 	}
 
 	/*
 	 * @author Alejandro Ortega Maldonado
+	 * 
 	 * @version 1.0
+	 * 
 	 * @return Devuelve un booleano en funcion de si todas las celdas estan
-	 *         ocupadas, pero no hay un ganador, en dicho caso habria empate.
+	 * ocupadas, pero no hay un ganador, en dicho caso habria empate.
 	 */
 	public boolean comprobarEmpate() {
 		int contadorOcupadas = 0;

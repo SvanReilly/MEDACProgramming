@@ -44,10 +44,10 @@ public class TresEnRaya {
 					+ ANSI_RESET);
 
 			System.out.println("Introduzca su nombre (PJ1, marca 'X'): ");
-			game.getJugador1().setName(ANSI_GREEN + sc.next() + ANSI_RESET);
+			game.getJugador1().setName(ANSI_GREEN + sc.next().toUpperCase() + ANSI_RESET);
 			game.getJugador1().setMarkup("X");
 			System.out.println("Introduzca su nombre (PJ2, marca '0'): ");
-			game.getJugador2().setName(ANSI_CYAN + sc.next() + ANSI_RESET);
+			game.getJugador2().setName(ANSI_CYAN + sc.next().toUpperCase() + ANSI_RESET);
 			game.getJugador2().setMarkup("O");
 			game.setJugadorActual(game.getJugador1());
 			
@@ -104,29 +104,3 @@ public class TresEnRaya {
 
 	}
 }
-
-
-
-/*
- * do { System.out.println(game.getTablero());
- * game.comprobarVictoria(jugadorActual); game.comprobarEmpate();
- * 
- * System.out.println("Turno de: " + jugadorActual.getName() + ". \n" +
- * "Inserte un caracter de posicion (de 'a' hasta 'i'): "); coordenada =
- * sc.next().toUpperCase(); game.pedirCoordenada(coordenada, jugadorActual);
- * 
- * if (!game.comprobarCeldas(coordenada)) {
- * System.out.println("Esa celda esta ocupada elija otra, por favor: ");
- * coordenada = sc.next(); game.comprobarCeldas(coordenada);
- * 
- * } else { game.cambiarJugador(jugadorActual);
- * 
- * }
- * 
- * } while (!game.isFinDePartida());
- * 
- * if (game.comprobarEmpate()) { System.out.println(game.getJugador1().getName()
- * + " y " + game.getJugador2().getName() + " han empatado"); } else if
- * (game.comprobarVictoria(jugadorActual)) {
- * System.out.println(game.getGanador().getName() + " ha ganado la partida."); }
- */
