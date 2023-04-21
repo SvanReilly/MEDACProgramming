@@ -1,5 +1,9 @@
 package refactorizarJavadoc;
 /**
+ * @version 2.0
+ * @since 2023/04/19
+ * @author Alejandro Ortega Maldonado
+ *
  * 
  */
 public class OPTIMIZACION{
@@ -9,7 +13,9 @@ public class OPTIMIZACION{
         return producto;
     }
     /**
-     * 
+	 * @version 2.0
+	 * @since 2023/04/19
+	 * @author Alejandro Ortega Maldonado
      */
     public static int valorMax(int[] arrayEnteros) {
         int maxValue = -1000000;
@@ -21,24 +27,41 @@ public class OPTIMIZACION{
         return maxValue;
     }
     /**
-     * 
+	 * @version 2.0
+	 * @since 2023/04/19
+	 * @author Alejandro Ortega Maldonado
+	 * @param base numero entero sobre el cual se aplicara el valor del exponente para obtener el resultado de su elevación
+	 * @param exponente numero entero que determinara el numero de veces el cual se multiplicara la base por si misma
+	 * @see Math utilizado el metodo .pow(x,y) de la case Math para 
+	 * realizar la operacion de elevar un numero
      */
     public static int elevarEntero(int base, int exponente) {
        int resultadoElevar= (int) Math.pow(base, exponente);
 		return resultadoElevar;
     }
     /**
-     * 
+	 * @version 2.0
+	 * @since 2023/04/19
+	 * @author Alejandro Ortega Maldonado
+	 * @param numInsertado
+	 * @return factorial Devuelve el resultado del factorial del numero insertado 
+	 * por parametro
      */
-    public static int factorialNumIns(int n) {
-        if (n == 0) {
-            return 1;
+    public static int factorialNumIns(int numInsertado) {
+        int factorial;
+    	if (numInsertado == 0) {
+    		factorial=1;
+            numInsertado= 1;
         } else {
-            return n * factorialNumIns(n-1);
+            factorial=numInsertado * factorialNumIns(numInsertado-1);
         }
+		return factorial;
     }
     /**
-     * 
+	 * @version 2.0
+	 * @since 2023/04/19
+	 * @author Alejandro Ortega Maldonado
+	 * 
      */
     public static void main(String[] args) {
 
