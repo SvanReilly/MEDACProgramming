@@ -30,8 +30,10 @@ public class OPTIMIZACION{
 	 * @version 2.0
 	 * @since 2023/04/19
 	 * @author Alejandro Ortega Maldonado
-	 * @param base numero entero sobre el cual se aplicara el valor del exponente para obtener el resultado de su elevación
-	 * @param exponente numero entero que determinara el numero de veces el cual se multiplicara la base por si misma
+	 * @param base numero entero sobre el cual se aplicara el valor del 
+	 * exponente para obtener el resultado de su elevación
+	 * @param exponente numero entero que determinara el numero de veces 
+	 * el cual se multiplicara la base por si misma
 	 * @see Math utilizado el metodo .pow(x,y) de la case Math para 
 	 * realizar la operacion de elevar un numero
      */
