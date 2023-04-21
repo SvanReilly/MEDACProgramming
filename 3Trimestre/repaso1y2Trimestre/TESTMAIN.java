@@ -61,23 +61,27 @@ public class TESTMAIN {
 			do {
 				System.out.println(ANSI_LIGHT_GREEN + ANSI_UNDERLINE + "Introduzca su nombre PJ1 (marca 'X'):" + ANSI_STOP_UNDERLINE + ANSI_RESET);
 				namePJ1=sc.nextLine().toUpperCase();
-				game.getJugador1().setName(ANSI_GREEN + namePJ1 + ANSI_RESET);
-				game.getJugador1().setMarkup(ANSI_LIGHT_GREEN+"X"+ ANSI_RESET);
 				if (namePJ1.length() < 4) {
-					System.out.println(ANSI_BOLD+"Por favor, minimo 3 caracteres"+ANSI_RESET);
+					System.out.println(ANSI_BOLD+"Por favor, minimo 4 caracteres"+ANSI_RESET);
 				}
 			} while (namePJ1.length() < 4);
+			
+			game.getJugador1().setName(ANSI_GREEN + namePJ1 + ANSI_RESET);
+			game.getJugador1().setMarkup(ANSI_LIGHT_GREEN+"X"+ ANSI_RESET);
 			
 			do {
 				System.out.println(ANSI_LIGHT_CYAN + "Introduzca su nombre PJ2 (marca 'O'): " + ANSI_RESET);
 				namePJ2=sc.nextLine().toUpperCase();
-				game.getJugador2().setName(ANSI_CYAN + namePJ2 + ANSI_RESET);
-				game.getJugador2().setMarkup(ANSI_LIGHT_CYAN + "O" + ANSI_RESET);
 				if (namePJ2.length() < 4) {
-					System.out.println(ANSI_BOLD+ "Por favor, minimo 3 caracteres" + ANSI_RESET);
+					System.out.println(ANSI_BOLD+ "Por favor, minimo 4 caracteres" + ANSI_RESET);
 				}
 
 			} while (namePJ2.length() < 4);
+			
+			game.getJugador2().setName(ANSI_CYAN + namePJ2 + ANSI_RESET);
+			game.getJugador2().setMarkup(ANSI_LIGHT_CYAN + "O" + ANSI_RESET);
+			
+			
 			
 			game.setJugadorActual(game.getJugador1());
 			
@@ -115,6 +119,8 @@ public class TESTMAIN {
 			switch (playAgainAnswer.toUpperCase()) {
 			case "Y":
 				playAgain = true;
+				namePJ1= "a";
+				namePJ2= "b";
 				break;
 			case "N":
 				playAgain = false;
