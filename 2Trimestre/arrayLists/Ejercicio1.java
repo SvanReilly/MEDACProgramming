@@ -32,7 +32,7 @@ public class Ejercicio1 {
 	}
 
 	public void add1stColor(String color) {
-		this.colores.add(0, color); // 0 marca la posición del elemento del array.
+		this.colores.add(0, color); // 0 marca la posicion del elemento del array.
 	}
 
 	public void addMiddleColor(String color) {
@@ -60,7 +60,7 @@ public class Ejercicio1 {
 	}
 
 	public void barajarColor() {
-		Collections.shuffle(colores); // Método de la clase abstracta Collections.
+		Collections.shuffle(colores); // Metodo de la clase abstracta Collections.
 	}
 	
 	public void invertirColores() {

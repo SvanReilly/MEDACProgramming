@@ -42,7 +42,6 @@ public class AI extends JUGADOR {
 	 * victoriaFila=(valor==tablero [A][N]	
 	 * }
 	 * 
-	 * 
 	 */
 	
 	

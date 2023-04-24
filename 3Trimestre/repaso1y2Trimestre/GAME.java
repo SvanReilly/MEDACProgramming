@@ -257,43 +257,16 @@ public class GAME {
 	 *
 	 */
 	public boolean comprobarVictoria1(JUGADOR jugador) {
-		int contador, filas, columnas;
+		int valor;
 		// Comprobar filas 1.0
-		for (filas = 0; filas < 3; filas++) {
-			contador = 0;
-			for (columnas = 0; columnas < 3; columnas++) {
-				if (getTablero().getCelda(filas, columnas).getSimbolo().equals(jugador.getMarkup())) {
-					contador++;
-				}
-			}
-			if (contador == 3) {
-				setGanador(jugador);
-				setFinDePartida(true);
-			} else {
-				setFinDePartida(false);
-			}
-
-		}
-		// Comprobar columnas 1.0
-		for (columnas = 0; columnas < 3; columnas++) {
-			contador = 0;
-			for (filas = 0; filas < 3; filas++) {
-				if (getTablero().getCelda(filas, columnas).getSimbolo().equals(jugador.getMarkup())) {
-					contador++;
-				}
-			}
-
-			if (contador == 3) {
-				setGanador(jugador);
-				setFinDePartida(true);
-			} else {
-				setFinDePartida(false);
-			}
-
-		}
+		//for (valor = 0; valor < 3; valor++) {
+		//	victoriaFila = this.tablero;
+		//	victoriaColumna = ()
 		return isFinDePartida();
+		
+		//}
 	}
-
+			
 	/*
 	 * @author Alejandro Ortega Maldonado
 	 * 
