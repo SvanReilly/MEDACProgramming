@@ -7,7 +7,7 @@ public class calculadoraMain2 {
 		
 		calculadora.empty();
 		
-		System.out.println(calculadora.sumar(1, 2))
+		System.out.println(calculadora.sumar(1, 2));
 		
 		System.out.println(calculadora.restar(0, 0));
 		
