@@ -18,7 +18,7 @@ public void insertarRegistro(String nombre, int edad){
         //Creamos la consulta SQL para insertar en BBDD
 
         //TODO -------------------------------------------------------------------------------------------------------
-        String sql = ""; //Debemos realizar una sentencia sql válida en la que los valores a añadir aparezcan como ?
+        String sql = "INSERT INTO usuarios VALUES (?, ?)"; //Debemos realizar una sentencia sql válida en la que los valores a añadir aparezcan como ?
         //------------------------------------------------------------------------------------------------------------
 
         //Creamos el objeto PreparedSteatement responsable de la ejecución de la consulta
@@ -29,10 +29,12 @@ public void insertarRegistro(String nombre, int edad){
         //TODO -------------------------------------------------------------------------------------------------------
         /*Ejemplos: pstmt.setTIPO(posicion_sentencia, valor_atributo); 
             - Existen setString, setInt, etc
-            - Las posiciones empieza en 1
-        */
+            - Las posiciones empieza en 1*/
+            
+            pstmt.setString(1, nombre);
+            pstmt.setInt(2, edad);
+        
 
-        pstmt.setString();
         //------------------------------------------------------------------------------------------------------------
         
         //Ejecutamos la consulta
@@ -67,13 +69,13 @@ public void eliminarRegistro(int id){
         //Creamos la consulta SQL para borrar en BBDD
 
         //TODO -------------------------------------------------------------------------------------------------------
-        String sql = ""; //Debemos realizar una sentencia sql válida en la que los valores a añadir aparezcan como ?
+        String sql = "DELETE FROM usuarios WHERE id=?"; //Debemos realizar una sentencia sql válida en la que los valores a añadir aparezcan como ?
         //------------------------------------------------------------------------------------------------------------
 
         //Creamos el objeto PreparedSteatement responsable de la ejecución de la consulta
         PreparedStatement pstmt = connection.prepareStatement(sql);
 
-
+        
         //Asignamos los valores a los parámetros necesarios para la consulta SQL
 
         //TODO -------------------------------------------------------------------------------------------------------
@@ -81,8 +83,8 @@ public void eliminarRegistro(int id){
             - Existen setString, setInt, etc
             - Las posiciones empieza en 1
         */
-
-        pstmt.setString();
+        
+        pstmt.setInt(1, id);
         //------------------------------------------------------------------------------------------------------------
         
         //Ejecutamos la consulta
@@ -117,11 +119,12 @@ public void modificarDatos(int id, String nombre, int edad){
         //Creamos la consulta SQL para modificar valores en BBDD
 
         //TODO -------------------------------------------------------------------------------------------------------
-        String sql = ""; //Debemos realizar una sentencia sql válida en la que los valores a añadir aparezcan como ?
+        String sql = "UPDATE usuarios SET nombre = ?, edad = ? WHERE id = ?"; //Debemos realizar una sentencia sql válida en la que los valores a añadir aparezcan como ?
         //------------------------------------------------------------------------------------------------------------
 
         //Creamos el objeto PreparedSteatement responsable de la ejecución de la consulta
         PreparedStatement pstmt = connection.prepareStatement(sql);
+
 
         //Asignamos los valores a los parámetros necesarios para la consulta SQL
 
@@ -130,8 +133,9 @@ public void modificarDatos(int id, String nombre, int edad){
             - Existen setString, setInt, etc
             - Las posiciones empieza en 1
         */
-
-        pstmt.setString();
+        pstmt.setString(1, nombre);
+        pstmt.setInt(2, edad);
+        pstmt.setInt(3, id);
         //------------------------------------------------------------------------------------------------------------
         
         //Ejecutamos la consulta
